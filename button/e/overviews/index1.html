@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="styles/odometer-theme-digital.css" />
+	<link rel="stylesheet" href="styles/jquery.ferro.ferroMenu.css" />
+	<link rel="stylesheet" href="styles/jquery.datetimepicker.css" />
+	<link rel="stylesheet" href="styles/style.css" />
+	<script type="text/javascript"
+	        src='//www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1","packages":["corechart"]}]}'></script>
+	<script src="scripts/jquery-1.9.1.min.js"></script>
+	<script src="scripts/jquery.ferro.ferroMenu-1.2.3.min.js"></script>
+	<script src="scripts/jquery.datetimepicker.js"></script>
+	<script src="scripts/odometer.min.js"></script>
+	<script src="scripts/script.js"></script>
+</head>
+<body>
+<div id="mainDiv" style="background-image: url(assets/bg1.jpg);">
+	<div id="header">
+		<div class="center">
+			<img src="assets/logo.png" id="logo" alt="logo" />
+
+			<div id="headerText">Overview</div>
+			<div id="screen">
+				<div id="custom" class="button">Custom</div>
+				<div id="online" class="button">Online</div>
+			</div>
+			<div clear></div>
+		</div>
+	</div>
+	<div id="content">
+		<div class="center">
+			<div id="top">
+				<div id="left">
+					<div class="row green" id="DOF_HQ">
+						<div class="icon"></div>
+						<div class="text">
+							<span>DOF_HQ</span>
+
+							<div class="pop">0</div>
+						</div>
+					</div>
+					<div class="row green" id="DOF_DR">
+						<div class="icon"></div>
+						<div class="text">
+							<span>DOF_DR</span>
+
+							<div class="pop">12345678</div>
+						</div>
+					</div>
+					<div class="row green" id="ADAC">
+						<div class="icon"></div>
+						<div class="text">
+							<span>ADAC</span>
+
+							<div class="pop">12345678</div>
+						</div>
+					</div>
+					<div class="row green" id="KPDC">
+						<div class="icon"></div>
+						<div class="text">
+							<span>KPDC</span>
+
+							<div class="pop">12345678</div>
+						</div>
+					</div>
+					<div class="row green" id="Mina">
+						<div class="icon"></div>
+						<div class="text">
+							<span>Mina</span>
+
+							<div class="pop">12345678</div>
+						</div>
+					</div>
+					<div class="row green" id="Sila">
+						<div class="icon"></div>
+						<div class="text">
+							<span>Sila</span>
+
+							<div class="pop">12345678</div>
+						</div>
+					</div>
+					<div class="row green" id="Mezyad">
+						<div class="icon"></div>
+						<div class="text">
+							<span>Mezyad</span>
+
+							<div class="pop">12345678</div>
+						</div>
+					</div>
+				</div>
+				<div id="middle">
+					<div class="row">
+						<div class="text">Virus</div>
+						<div class="odo" id="virusOdo"></div>
+					</div>
+					<div class="row">
+						<div class="text">Threat</div>
+						<div class="odo" id="threatOdo"></div>
+					</div>
+					<div class="row">
+						<div class="text">VPN</div>
+						<div class="odo" id="vpnOdo"></div>
+					</div>
+					<div class="row">
+						<div class="text">Public IP</div>
+						<div class="odo" id="ipOdo"></div>
+					</div>
+				</div>
+				<div id="right">
+				</div>
+				<div clear></div>
+			</div>
+			<div clear></div>
+			<div id="bottom">
+				<div class="chart">
+					<div id="chart1">
+						<div class="title">Network Virus</div>
+						<div id="chart11"></div>
+					</div>
+					<div id="chart2">
+						<div class="title">End User Virus</div>
+						<div id="chart12"></div>
+					</div>
+					<div clear></div>
+					<div class="title">Virus</div>
+				</div>
+				<div class="chart">
+					<div id="chart3"></div>
+					<div class="title">Threat</div>
+				</div>
+				<div class="chart">
+					<div id="chart4"></div>
+					<div class="title">VPN</div>
+				</div>
+				<div class="chart">
+					<div id="chart5"></div>
+					<div class="title">Public IP</div>
+				</div>
+				<div id="rss">
+					<h1>RSS</h1>
+					<marquee class="list" direction="up" onmouseover="this.stop()" onmouseout="this.start()"
+					         scrollamount="4">
+						<div class="row">Net Craft</div>
+						<div class="row">Latest articles from SC Magazine News</div>
+						<div class="row">Gartner Blog Network gbn-feed - Gartner Blog Network</div>
+						<div class="row">SecurityWeek RSS Feed</div>
+						<div class="row">SpeedGuide.net Broadband Community - 46,68,70,71,102</div>
+						<div class="row">TheHackersNews</div>
+						<div class="row">aeCERT - Infosec Notices</div>
+						<div class="row">Vulnerabilities RSS Feed - Symantec Corp.</div>
+						<div class="row">aeCERT - Advisory</div>
+						<div class="row">IASE RSS Feed</div>
+						<div class="row">National Vulnerability Database</div>
+						<div class="row">aeCERT - Statistics</div>
+					</marquee>
+				</div>
+				<div clear></div>
+			</div>
+		</div>
+	</div>
+	<div id="popup">
+		<div id="modal"></div>
+		<div id="popcontent">
+			<div id="popheader">Select Date range</div>
+			<div id="popbody">
+				<form id="customForm">
+					<label>From:</label>
+					<input type="text" id="fromDate" /><br />
+					<label>To:</label>
+					<input type="text" id="toDate" />
+					<div>
+						<input type="button" value="Go" id="customGo" />
+						<input type="button" value="Cancel" id="closePop" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="chartContainer">
+		<div id="chartContent">
+			<div id="contentChart" title="Rama Krishna"></div>
+			<div id="closeChart"></div>
+		</div>
+	</div>
+	<div id="tableparentConBack">
+		<div class="tableParent" id="stopProp">
+			<div id="closeTable"></div>
+			<div class="buttonsnav">
+				<div id="nv" class="bnv default">Network virus</div>
+				<div id="euv" class="bnv">End user virus</div>
+			</div>
+			<div id="tableheader">
+			</div>
+			<div id="tablebodydata">
+			</div>
+		</div>
+	</div>
+</div>
+<ul id="nav">
+	<li id="virus">
+		<span>Virus</span>
+		<div class="pop">5678</div>
+	</li>
+	<li id="threat"><span>Threat</span>
+		<div class="pop">5678</div>
+	</li>
+	<li id="vpn"><span>VPN</span>
+		<div class="pop">5678</div>
+	</li>
+	<li id="publicip"><span>Public IP</span>
+		<div class="pop">5678</div>
+	</li>
+</ul>
+<div id="loaderDiv"></div>
+</body>
+</html>

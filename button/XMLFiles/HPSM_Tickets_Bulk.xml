@@ -1,0 +1,3128 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <HPSMTickets>
+    <Sl_No>1</Sl_No>
+    <Date>2015-01-04T00:00:00+04:00</Date>
+    <case_no>SD282856</case_no>
+    <Case_title>High number of traffic from unity server towards malicious website</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As Per Documentation From Microsoft.Restricting traffic from unsecured networks to the Server on ports (445,139) will remove the risk
+this action could be taken as  a workaround for the time been instead of shutting down the server totally</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>1</Sl_No>
+    <Date>2015-04-01T00:00:00+04:00</Date>
+    <case_no>SD303409</case_no>
+    <Case_title>High number of failed login for the user Basher</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user was a temp user for testing and now its removed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>2</Sl_No>
+    <Date>2015-01-10T00:00:00+04:00</Date>
+    <case_no>SD284041</case_no>
+    <Case_title>“A process has exited” (MEZDC2.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>updates applied restarted the server kindly monitor.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>2</Sl_No>
+    <Date>2015-04-01T00:00:00+04:00</Date>
+    <case_no>SD303613</case_no>
+    <Case_title>Installation of client on laptop dofitButti-tab</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Successfully installed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>3</Sl_No>
+    <Date>2015-01-19T00:00:00+04:00</Date>
+    <case_no>SD285956</case_no>
+    <Case_title>System not reflecting on SEPM</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>after check with user in free port symantac now is updated by SOC team</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>3</Sl_No>
+    <Date>2015-04-02T00:00:00+04:00</Date>
+    <case_no>SD303830</case_no>
+    <Case_title>PA-User ID agent Server slowness issue</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the server is very slow in processing the GP its moved to another OU now its fine</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>4</Sl_No>
+    <Date>2015-01-20T00:00:00+04:00</Date>
+    <case_no>SD286244  </case_no>
+    <Case_title>Top Active Botnet” found , Affected Device : 172.25.0.195</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SIRT Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Blocked the Attacker source IP, please monitor this ip and if there is any more activity let us know to do more deeply investigation</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>4</Sl_No>
+    <Date>2015-04-05T00:00:00+04:00</Date>
+    <case_no>SD304006</case_no>
+    <Case_title>Threshold: CPU Utilization</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>It normal as per the Cisco TAC. So we can ignore it, however kindly alert us if it is persistent above 80%  for longer period</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>5</Sl_No>
+    <Date>2015-01-23T00:00:00+04:00</Date>
+    <case_no>SD286934</case_no>
+    <Case_title>Deny Inbound UDP</Case_title>
+    <location>Sila</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This is connectin message not critical</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>5</Sl_No>
+    <Date>2015-04-05T00:00:00+04:00</Date>
+    <case_no>SD304007</case_no>
+    <Case_title>The router's configuration Changes</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Its daily Operations</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>6</Sl_No>
+    <Date>2015-01-27T00:00:00+04:00</Date>
+    <case_no>SD287856 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Since the user dof000935 is not part of VPN Domain and we have not observe any new event. Hence closing this case</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>6</Sl_No>
+    <Date>2015-04-06T00:00:00+04:00</Date>
+    <case_no>SD304690 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user does not exist in our domain</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>7</Sl_No>
+    <Date>2015-01-28T00:00:00+04:00</Date>
+    <case_no>SD287861</case_no>
+    <Case_title>Windows Reboot</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Plan Manager installation RFC no C12177  Open for that</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>7</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>SD302577</case_no>
+    <Case_title>Need to scan the PC : 10.25.212.30</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As checked it is updated and we are proceeding to close ticket</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>8</Sl_No>
+    <Date>2015-01-28T00:00:00+04:00</Date>
+    <case_no>SD286908</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Necessary ports have been opened. Please check the status and confirm</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>8</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>SD304846</case_no>
+    <Case_title>Need to add the symantec client on the machine:10.25.160.12</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Software pushed successfully from SEPM</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>9</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288178 </case_no>
+    <Case_title>Microsoft Windows SMB NTLM Authentication Lack of Entropy Vulnerability</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Application Vulnerability</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Kindly block the SMB traffic for the source server.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>9</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>IM189638 </case_no>
+    <Case_title>Unable to Connect VPN (ADFCA)                                                 </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>User confirmed that it is working fine.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>10</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288327</case_no>
+    <Case_title>Issue with link (Sathish)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>10</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>IM189629 </case_no>
+    <Case_title>Unable to connect VPN of external entities (ADFCA)                            </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user is trying to access VPN which belongs to external entity. This VPN is not under the control of DOF and this is not DOF VPN. Kindly contact external entity to access their VPN.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>11</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288389</case_no>
+    <Case_title>Windows Reboot - 172.31.12.100 (KHCCTVDIR.dof.abudhabi.gov) and 172.25.50.40 (FinHVhost02.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the restart is required for the installation of the reporting system</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>11</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>SD305234 </case_no>
+    <Case_title>Windows Reboot - 172.23.74.12 (MUDCCTVARC.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>12</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288405</case_no>
+    <Case_title>Windows: User account created</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Configuration</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>is is a legitimate act for new reporting server installation.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>12</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>SD305236</case_no>
+    <Case_title>Unable to push SEPM clients</Case_title>
+    <location>Sila</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>13</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288437 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user name is Sarah AbdulQader AlMenhali and shae does not have VPN access</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>13</Sl_No>
+    <Date>2015-04-07T00:00:00+04:00</Date>
+    <case_no>SD305238 </case_no>
+    <Case_title>Unparsed Events from Device 10.25.200.101</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>SPF Module was removed.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>14</Sl_No>
+    <Date>2015-01-30T00:00:00+04:00</Date>
+    <case_no>SD288448</case_no>
+    <Case_title>Windows Reboot - 172.25.50.21 (FINPRN1.dof.abudhabi.gov) and 172.25.50.55 (FINHR01)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>this is an approved change CR # C12185  to shift virtual servers</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>14</Sl_No>
+    <Date>2015-04-08T00:00:00+04:00</Date>
+    <case_no>SD305403</case_no>
+    <Case_title>Virus Activity </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Scanned the pc and its clean nothing found                                                                                                                                                                 </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>15</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288477 </case_no>
+    <Case_title>An account failed to log on for the user dof33621</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user is a legitimate user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>15</Sl_No>
+    <Date>2015-04-08T00:00:00+04:00</Date>
+    <case_no>SD305491</case_no>
+    <Case_title>Need to install SEPM client on the machine : 10.26.154.64</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>16</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288557 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.57 finarc-ver.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>CR # C12185  for shifting these server which requires restart.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>16</Sl_No>
+    <Date>2015-04-08T00:00:00+04:00</Date>
+    <case_no>SD305638 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.118 (FINTCOR.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Kindly remove this server from monitoring this is a test server               </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>17</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288568 </case_no>
+    <Case_title>Request to open firewall Port (FW12201539)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Changes implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>17</Sl_No>
+    <Date>2015-04-08T00:00:00+04:00</Date>
+    <case_no>IM189399</case_no>
+    <Case_title>Firewall open request : TICKET NO FW54201570</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>18</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no> SD288764</case_no>
+    <Case_title>Windows: Shutdown - Reboot 172.25.85.13 (ADFINTMAT)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The server was not responding and it was restarted as per the request of Fawzeya.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>18</Sl_No>
+    <Date>2015-04-12T00:00:00+04:00</Date>
+    <case_no>SD306373 </case_no>
+    <Case_title>Windows Reboot - 10.25.197.39 (DOF-CCTV-1.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Trouble shooting the issue </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>19</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288568</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Change has been implemented as per request                                                                                                                                                              </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>19</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>SD305976 </case_no>
+    <Case_title>Install New Pc's </Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>20</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD286908</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Necessary ports have been opened.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>20</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>SD306506 </case_no>
+    <Case_title>A user account was deleted.</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>User is deleted and is no longer used</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>21</Sl_No>
+    <Date>2015-02-02T00:00:00+04:00</Date>
+    <case_no>SD288794 </case_no>
+    <Case_title>An account failed to log on for the user doc001212</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user is a legitimate user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>21</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>SD306796 </case_no>
+    <Case_title>SEPM Client Installation on DOFACC678</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>22</Sl_No>
+    <Date>2015-02-02T00:00:00+04:00</Date>
+    <case_no>SD288830 </case_no>
+    <Case_title>VPN Failed Authentication from the user 'ehammadi'</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Reset Password for the user and he is able to connect</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>22</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>SD306871 </case_no>
+    <Case_title>Windows Reboot - 172.25.85.51 (TAWTEEN.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The server  was not accessible, it was restarted to be able to access</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>23</Sl_No>
+    <Date>2015-02-02T00:00:00+04:00</Date>
+    <case_no>SD288840 </case_no>
+    <Case_title>An account failed to log on for the user dof032001</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user is A legitimate user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>23</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>IM185559</case_no>
+    <Case_title>Firewall open request : FW23201551</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ginni</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>24</Sl_No>
+    <Date>2015-02-02T00:00:00+04:00</Date>
+    <case_no>SD288530</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issuse resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>24</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>IM190420</case_no>
+    <Case_title>Firewall open request : FW124201572</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ginni</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>25</Sl_No>
+    <Date>2015-02-02T00:00:00+04:00</Date>
+    <case_no>SD288531</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issuse resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>25</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>IM190435</case_no>
+    <Case_title>Firewall open request : FW134201573</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ginni</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>26</Sl_No>
+    <Date>2015-02-02T00:00:00+04:00</Date>
+    <case_no>SD288953</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Checked and same is working fine.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>26</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>IM190046</case_no>
+    <Case_title>Remote Desktop Access</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ginni</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>job requires visting Customs Sites on regular basis.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>27</Sl_No>
+    <Date>2015-02-03T00:00:00+04:00</Date>
+    <case_no>SD289160  </case_no>
+    <Case_title>Windows Reboot - MUDCCTVARC.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>server restart cause of memory error , faulty memory already replaced by the vendor </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>27</Sl_No>
+    <Date>2015-04-13T00:00:00+04:00</Date>
+    <case_no>IM190486</case_no>
+    <Case_title>Connectivity with Hyperion Server</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ginni</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>has been followed by new ticket number IM191957</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>28</Sl_No>
+    <Date>2015-02-03T00:00:00+04:00</Date>
+    <case_no>SD289274 </case_no>
+    <Case_title>VPN Failed to login</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user is a temp VPN user for testing now its removed.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>28</Sl_No>
+    <Date>2015-04-14T00:00:00+04:00</Date>
+    <case_no>SD307119 </case_no>
+    <Case_title>Malware trying to spread across network</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Scan the pc, and removed 2 adware's</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>29</Sl_No>
+    <Date>2015-02-03T00:00:00+04:00</Date>
+    <case_no>SD289387 </case_no>
+    <Case_title>Windows Reboot -  TRCCTVDIR.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Genetec security center troubleshooting activities</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>29</Sl_No>
+    <Date>2015-04-14T00:00:00+04:00</Date>
+    <case_no>SD307279 </case_no>
+    <Case_title>Windows Reboot - 172.25.85.14 (FINTMATCON.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Restarted due to new installation for new customs access</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>30</Sl_No>
+    <Date>2015-02-03T00:00:00+04:00</Date>
+    <case_no>IM182609</case_no>
+    <Case_title>Device Not reachable</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>30</Sl_No>
+    <Date>2015-04-15T00:00:00+04:00</Date>
+    <case_no>SD307713 </case_no>
+    <Case_title>SEPM Client Installation on UPDATETEST</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>31</Sl_No>
+    <Date>2015-02-04T00:00:00+04:00</Date>
+    <case_no>SD289777 </case_no>
+    <Case_title>An account failed to log on for the user doc20774</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user is a legitimate user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>31</Sl_No>
+    <Date>2015-04-15T00:00:00+04:00</Date>
+    <case_no>SD307692</case_no>
+    <Case_title>SEPM Client Installation AUHSECIURTYC1</Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>32</Sl_No>
+    <Date>2015-02-04T00:00:00+04:00</Date>
+    <case_no>SD289784 </case_no>
+    <Case_title>Windows: Shutdown - Reboot 172.25.80.81 (HYPFMD1.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The server is a development server</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>32</Sl_No>
+    <Date>2015-04-15T00:00:00+04:00</Date>
+    <case_no>SD306741  </case_no>
+    <Case_title>Unable to push SEPM clients</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>33</Sl_No>
+    <Date>2015-02-04T00:00:00+04:00</Date>
+    <case_no>SD289786 </case_no>
+    <Case_title>LOGIN_FAILED on Multiple device</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>We have removed the username from the LMS site</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>33</Sl_No>
+    <Date>2015-04-16T00:00:00+04:00</Date>
+    <case_no>SD307898 </case_no>
+    <Case_title>Malware trying for Reconnaissance Attack</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Scan the pc and also check on pc nothing found</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>34</Sl_No>
+    <Date>2015-02-05T00:00:00+04:00</Date>
+    <case_no>SD289896</case_no>
+    <Case_title>Windows Reboot - 172.31.12.101 (KHCCTVARCH.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Genetec Security Center troubleshooting activities</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>34</Sl_No>
+    <Date>2015-04-16T00:00:00+04:00</Date>
+    <case_no>SD308008 </case_no>
+    <Case_title>SSH User Authentication Brute-force Attempt</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>migration for CISCO CCX is in process</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>35</Sl_No>
+    <Date>2015-02-05T00:00:00+04:00</Date>
+    <case_no>SD290015</case_no>
+    <Case_title>Top Active Botnet found , Affected Device : 172.25.0.195</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SIRT Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>No such record find to check the internal IP Address or user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>35</Sl_No>
+    <Date>2015-04-16T00:00:00+04:00</Date>
+    <case_no>SD308015 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.141 (findevcontent.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Kindly remove this server as it is a test and development server </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>36</Sl_No>
+    <Date>2015-02-07T00:00:00+04:00</Date>
+    <case_no>SD290123</case_no>
+    <Case_title>High number of failed login for different users</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The users are all legitimate users that may have expired passwords</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>36</Sl_No>
+    <Date>2015-04-16T00:00:00+04:00</Date>
+    <case_no>SD308097 </case_no>
+    <Case_title>SEPM Client Installation on AUHDOC023526</Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>37</Sl_No>
+    <Date>2015-02-08T00:00:00+04:00</Date>
+    <case_no>SD290269</case_no>
+    <Case_title>VPN Failed to login</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Reset password solved the issue</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>37</Sl_No>
+    <Date>2015-04-17T00:00:00+04:00</Date>
+    <case_no>SD308155 </case_no>
+    <Case_title>Symantec Endpoint Protection Client Installation - Al Ain location</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed SEPM clients </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>38</Sl_No>
+    <Date>2015-02-08T00:00:00+04:00</Date>
+    <case_no>SD290397</case_no>
+    <Case_title>Windows Reboot -(10.26.115.16)DIRECTORYSERVER.dof.abudhabi.gov</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>server restart was on plan activities to install reactivate plan manager plugin RFC CR # C12177</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>38</Sl_No>
+    <Date>2015-04-17T00:00:00+04:00</Date>
+    <case_no>SD308156 </case_no>
+    <Case_title>Login Failed on McAfee EPO</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Its error in authentication/integration between ePO and NDLP-Manager due to update in the ePO admin user Password.
+
+</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>39</Sl_No>
+    <Date>2015-02-09T00:00:00+04:00</Date>
+    <case_no>SD290477 </case_no>
+    <Case_title>VPN Failed to login</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the users are legitimate users that my have expired password.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>39</Sl_No>
+    <Date>2015-04-18T00:00:00+04:00</Date>
+    <case_no>T1177</case_no>
+    <Case_title>IPT Services IVR system Upgrade</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>40</Sl_No>
+    <Date>2015-02-09T00:00:00+04:00</Date>
+    <case_no>SD290162</case_no>
+    <Case_title>FIREWALL OPEN IS APPROVED BY بطي عتيق محمد حبروش الرميثي, TICKET NO FW12201540</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ashraf</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>40</Sl_No>
+    <Date>2015-04-18T00:00:00+04:00</Date>
+    <case_no>T1181</case_no>
+    <Case_title>Implementing Cisco Identity Services Engine for network access security for wired and wireless access</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>41</Sl_No>
+    <Date>2015-02-09T00:00:00+04:00</Date>
+    <case_no>SD290766</case_no>
+    <Case_title>Windows Reboot -172.30.12.50 (CCTVTMON01)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>41</Sl_No>
+    <Date>2015-04-21T00:00:00+04:00</Date>
+    <case_no>SD309079</case_no>
+    <Case_title> VPN Failed logins followed by successful login: dof-noc</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Events are known to the user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>42</Sl_No>
+    <Date>2015-02-10T00:00:00+04:00</Date>
+    <case_no>SD290993</case_no>
+    <Case_title>An account failed to log on for the user MEZCCTVDIR$</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The server requires rejoin then it will have no issue.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>42</Sl_No>
+    <Date>2015-04-21T00:00:00+04:00</Date>
+    <case_no>SD309222</case_no>
+    <Case_title>High number of failed login for the user muhammad</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Its due to change in periodic password</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>43</Sl_No>
+    <Date>2015-02-10T00:00:00+04:00</Date>
+    <case_no>SD291008 </case_no>
+    <Case_title>An account failed to log on for the user MEZYADTMG2010$</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This is a legitimate act from TMG server.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>44</Sl_No>
+    <Date>2015-02-10T00:00:00+04:00</Date>
+    <case_no>SD291015  </case_no>
+    <Case_title> An account failed to log on for the user axis</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mamoun changed the password</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>44</Sl_No>
+    <Date>2015-04-22T00:00:00+04:00</Date>
+    <case_no>SD309447 </case_no>
+    <Case_title>ICMP: Nachi-like Ping</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Checked and scan complete system but did find any thing</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>45</Sl_No>
+    <Date>2015-02-10T00:00:00+04:00</Date>
+    <case_no>SD291183</case_no>
+    <Case_title>Interface Operational Information</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Its normal daily operations</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>45</Sl_No>
+    <Date>2015-04-22T00:00:00+04:00</Date>
+    <case_no>IM191957</case_no>
+    <Case_title>Web Access UAT/PROD</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>46</Sl_No>
+    <Date>2015-02-08T00:00:00+04:00</Date>
+    <case_no>IM183081</case_no>
+    <Case_title>A REQUEST FOR FIREWALL OPEN  - FW82201543</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>46</Sl_No>
+    <Date>2015-04-22T00:00:00+04:00</Date>
+    <case_no>IM191958</case_no>
+    <Case_title>FIREWALL OPEN, TICKET NO FW224201581</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>47</Sl_No>
+    <Date>2015-02-04T00:00:00+04:00</Date>
+    <case_no>IM182673  </case_no>
+    <Case_title>VPN Connection terminated by Locally client</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user is using desktop hence requested user to open the firewall eservice ticket.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>47</Sl_No>
+    <Date>2015-04-23T00:00:00+04:00</Date>
+    <case_no>SD309888</case_no>
+    <Case_title>Interface Operational Information</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Monitored and no logs appeared.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>48</Sl_No>
+    <Date>2015-02-11T00:00:00+04:00</Date>
+    <case_no>IM182768 </case_no>
+    <Case_title>FIREWALL OPEN  Request use the falcon application for the following pc's (172.27.15.52,172.27.15.18,172.27.15.40,172.27.17.15,172.27.17.11,172.27.14.13,172.27.12.25;172.27.14.14;172.27.14.12,172.27.14.17)</Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>48</Sl_No>
+    <Date>2015-04-23T00:00:00+04:00</Date>
+    <case_no>SD309900</case_no>
+    <Case_title>Windows Reboot - 172.23.58.24</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>complete of system troubleshooting activities</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>49</Sl_No>
+    <Date>2015-02-11T00:00:00+04:00</Date>
+    <case_no>SD291507 </case_no>
+    <Case_title>Windows Reboot - 172.23.67.5 (ANPOCCTVARCH02.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>49</Sl_No>
+    <Date>2015-04-25T00:00:00+04:00</Date>
+    <case_no> SD310187</case_no>
+    <Case_title>“Interface Gi0/1 down/up” 192.168.208.37</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>We have checked with Etisalat Team for RFO. As per them, there was some issues in fiber media and their end</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>50</Sl_No>
+    <Date>2015-02-11T00:00:00+04:00</Date>
+    <case_no>IM183393</case_no>
+    <Case_title>Firewall Request : FW102201544</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>50</Sl_No>
+    <Date>2015-04-26T00:00:00+04:00</Date>
+    <case_no>SD308155</case_no>
+    <Case_title>We unable to push SEPM clients</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Has ben installed successfully</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>51</Sl_No>
+    <Date>2015-02-12T00:00:00+04:00</Date>
+    <case_no>SD291690 </case_no>
+    <Case_title>An account failed to log on for the user fatima.saeed</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user does not exist in AD</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>51</Sl_No>
+    <Date>2015-04-26T00:00:00+04:00</Date>
+    <case_no>SD310159</case_no>
+    <Case_title>LAN was down in SOC team section</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Network</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>There Was an activity resplicing the fiber cables in 3rd floor</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>52</Sl_No>
+    <Date>2015-02-12T00:00:00+04:00</Date>
+    <case_no>SD291701  </case_no>
+    <Case_title>An account failed to log on for the user CCTVM25515$</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Solved Successfully as the user request</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>52</Sl_No>
+    <Date>2015-04-26T00:00:00+04:00</Date>
+    <case_no>IM191515</case_no>
+    <Case_title>FIREWALL OPEN TICKET NO FW194201577</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>53</Sl_No>
+    <Date>2015-02-11T00:00:00+04:00</Date>
+    <case_no>IM182665</case_no>
+    <Case_title>Firewall Request : FW12201538</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>53</Sl_No>
+    <Date>2015-04-26T00:00:00+04:00</Date>
+    <case_no>SD310267</case_no>
+    <Case_title>Windows system restart - 172.25.50.238</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Kindly remove from monitoring</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>54</Sl_No>
+    <Date>2015-02-15T00:00:00+04:00</Date>
+    <case_no>SD291955</case_no>
+    <Case_title>vpn Auth failed</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Legitimate traffic</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>54</Sl_No>
+    <Date>2015-04-26T00:00:00+04:00</Date>
+    <case_no>SD310559 </case_no>
+    <Case_title>UNIX NFS Export Directory Attempt</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>NFS Export Directory Attempt</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Both the Servers mentioned are Windows servers so NFS is nothing to do with this. Kindly closed the ticket as it is on false proposition.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>55</Sl_No>
+    <Date>2015-02-15T00:00:00+04:00</Date>
+    <case_no>SD292226</case_no>
+    <Case_title>Remote Access request</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>56</Sl_No>
+    <Date>2015-02-15T00:00:00+04:00</Date>
+    <case_no>SD292237</case_no>
+    <Case_title>RDP Access for SARI SABRI </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Access provided</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>56</Sl_No>
+    <Date>2015-04-27T00:00:00+04:00</Date>
+    <case_no>SD310778</case_no>
+    <Case_title>Install Symantec in  2 New Pc's</Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed succesfully</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>57</Sl_No>
+    <Date>2015-02-16T00:00:00+04:00</Date>
+    <case_no>SD292345 </case_no>
+    <Case_title>A member was removed from a security-enabled global group</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This is a legitimate act.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>57</Sl_No>
+    <Date>2015-04-27T00:00:00+04:00</Date>
+    <case_no>SD310884   </case_no>
+    <Case_title>Windows Reboot - GHCCTVARCH04.dof.abudhabi.gov</Case_title>
+    <location>Sila</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>referred to site support - Al Ain Customs</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>58</Sl_No>
+    <Date>2015-02-16T00:00:00+04:00</Date>
+    <case_no>SD292433 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.82 (finVkms.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the server services was un accessible</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>58</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD310901</case_no>
+    <Case_title>Windows Reboot - 172.25.50.42 FINMBX02.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Servers restarted to trouble shoot backup issues</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>59</Sl_No>
+    <Date>2015-02-16T00:00:00+04:00</Date>
+    <case_no>SD292377 </case_no>
+    <Case_title>Email issuses</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Email Server Issuse</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>MTA services was hung because of high memory utilization ,we have restore the service now.We have tested and observe mails are working normally.
+
+</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>59</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD310906</case_no>
+    <Case_title>SEPM showing Content failure Error</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issuse has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>60</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD311290 </case_no>
+    <Case_title>A member was removed from a security-enabled global group</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Exchange Archiving Tasks are facing trouble due to EVService Domain Admin priveledges. Once it resolved then this would be added back to group</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>61</Sl_No>
+    <Date>2015-02-16T00:00:00+04:00</Date>
+    <case_no>T1125</case_no>
+    <Case_title> ADHA access to COMM BLD system</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Disabled</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>61</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD311291 </case_no>
+    <Case_title>Windows: Shutdown - Reboot on 172.25.50.123 (FINARCH01.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>FinARCH01 is down due to clustering error and restart was done to bring the node up. It is working and up now after maintenance</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>62</Sl_No>
+    <Date>2015-02-17T00:00:00+04:00</Date>
+    <case_no>SD292752 </case_no>
+    <Case_title>An account failed to log on for the user MEZYADTMG2010$</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This a legitimate access from TMG server.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>62</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD311293</case_no>
+    <Case_title>SEPM Client Installation on DOFIT21485PC</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Unable to Push SEPM, Since the server is in Ofline</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>63</Sl_No>
+    <Date>2015-02-17T00:00:00+04:00</Date>
+    <case_no>SD292762  </case_no>
+    <Case_title>Windows Reboot - FINARCH01.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the server was restarted  due to archiving services failure</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>63</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD311298</case_no>
+    <Case_title>Mina Connector server 172.26.50.136  Down</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Server Outage</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issuse resolved, Kindly close this case</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>64</Sl_No>
+    <Date>2015-02-17T00:00:00+04:00</Date>
+    <case_no>SD292759  </case_no>
+    <Case_title>An account failed to log on for the user axis</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mamoun reset the password</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>64</Sl_No>
+    <Date>2015-04-28T00:00:00+04:00</Date>
+    <case_no>SD311310</case_no>
+    <Case_title>Adj resolve request:failed to resolve 172.23.115.16 vlan 12"</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>65</Sl_No>
+    <Date>2015-02-17T00:00:00+04:00</Date>
+    <case_no>SD292722</case_no>
+    <Case_title>Install Symantec AV in Servers (No privilages for soc team)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Anti Virus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>AV installed.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>65</Sl_No>
+    <Date>2015-04-29T00:00:00+04:00</Date>
+    <case_no>SD311342   </case_no>
+    <Case_title>FRU Power Supply is not responding from the device address : 172.23.113.5</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>work in progress with dof-noc</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>66</Sl_No>
+    <Date>2015-02-17T00:00:00+04:00</Date>
+    <case_no>SD292879</case_no>
+    <Case_title>Upgrade Windows XP machines in our network.</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Application Vulnerability</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>they must send to Mr maktoom official letter</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>66</Sl_No>
+    <Date>2015-04-29T00:00:00+04:00</Date>
+    <case_no>IM192848</case_no>
+    <Case_title>Unable to send mail to outside organization</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Email</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Checked and found that mails were in processing state and later same has been delivered successfully. And also confirmed to the user.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>67</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>SD292920  </case_no>
+    <Case_title>Windows Reboot - MEZDC2.dof.abudhabi.gov</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As per the case # IM 180227  , the server has an issue we installed security updates and restart was required.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>67</Sl_No>
+    <Date>2015-04-29T00:00:00+04:00</Date>
+    <case_no>IM192807</case_no>
+    <Case_title>we have problem when we try sent any email to the outside dof organization</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Email</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Checked and found that mails were in processing state and later same has been delivered successfully. And also confirmed to the user.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>68</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>SD293081 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>68</Sl_No>
+    <Date>2015-04-29T00:00:00+04:00</Date>
+    <case_no>SD311517</case_no>
+    <Case_title>Windows Reboot - MINACCTVARCH02.dof.abudhabi.gov</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>faulty HDD replaced by ateco company and raid rebuilding , needed restart</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>69</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>IM184144 </case_no>
+    <Case_title>allow new source IP for AlAin Municipality to access ERP system</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>70</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>IM184002 </case_no>
+    <Case_title>ASE redesign and redundant connections activation</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>70</Sl_No>
+    <Date>2015-04-30T00:00:00+04:00</Date>
+    <case_no>IM192844</case_no>
+    <Case_title>Problem in printer access</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Checked with DLP Team and they confirmed with user that issue is resolved. Hence closing the call.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>71</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>IM184145</case_no>
+    <Case_title>for wireless corporate users to access as wired corporate users, below subnets for accessing DOF services for corporate users, and voice environment access.</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>72</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no> SD293269</case_no>
+    <Case_title>Acs configuration changes</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Configuration</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>configuring network level for  fortigate POC  as security team asked.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>72</Sl_No>
+    <Date>2015-04-30T00:00:00+04:00</Date>
+    <case_no>SD312149</case_no>
+    <Case_title>Arcsight connector Server Down 172.25.100.100</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Server Outage</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>73</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>SD291955</case_no>
+    <Case_title>vpn Auth failed</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>74</Sl_No>
+    <Date>2015-02-18T00:00:00+04:00</Date>
+    <case_no>IM184151</case_no>
+    <Case_title>Firewall Open Ports Request,HP System Upgrade project</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>75</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>IM182785</case_no>
+    <Case_title>for enabling DFS file sharing located on DOF DR for ALAIN sites we need to open port 445 </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>75</Sl_No>
+    <Date>2015-05-01T00:00:00+04:00</Date>
+    <case_no>SD312227 </case_no>
+    <Case_title>McAfee ESM connectivity Failure</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>solved successfully</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>76</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>IM184189</case_no>
+    <Case_title>Problem with program</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes have been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>76</Sl_No>
+    <Date>2015-05-03T00:00:00+04:00</Date>
+    <case_no>SD312530</case_no>
+    <Case_title>SD312530 -ephone:IP:socket:device Type:has unregistered abnormally</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue is with Etisalat, Now links are working fine</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>77</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>IM182912 </case_no>
+    <Case_title>Notification of reset passwords not received</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As per user confirmation , closed the ticket</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>77</Sl_No>
+    <Date>2015-05-04T00:00:00+04:00</Date>
+    <case_no>SD312824</case_no>
+    <Case_title>DOF HQ Users access Mina Proxy</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Proxy</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>78</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>IM183547  </case_no>
+    <Case_title>User don't receive reset password notification email                  </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As per user confirmation , closed the ticket</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>78</Sl_No>
+    <Date>2015-05-04T00:00:00+04:00</Date>
+    <case_no>SD312834</case_no>
+    <Case_title>Kindly check connection 172.16.203.95 </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Network</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>pending with presedential court for IP clarification.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>79</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>IM183313 </case_no>
+    <Case_title>ADSIC- Notifications Issue                                                    </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As per user confirmation , closed the ticket</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>79</Sl_No>
+    <Date>2015-05-04T00:00:00+04:00</Date>
+    <case_no>SD312792 </case_no>
+    <Case_title>A member was removed from a security-enabled global group</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Legitimate activity</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>80</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>SD293489</case_no>
+    <Case_title>An account failed to log on for the user MEZYADTMG2010$</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>80</Sl_No>
+    <Date>2015-05-04T00:00:00+04:00</Date>
+    <case_no>SD312898</case_no>
+    <Case_title>Not receiving any proxy logs on ESM</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>It was due to data source changes done during migration, problem has now been resolved.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>81</Sl_No>
+    <Date>2015-02-19T00:00:00+04:00</Date>
+    <case_no>SD293455</case_no>
+    <Case_title>install Mcafee</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Anti Virus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed DLP &amp; SEP</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>81</Sl_No>
+    <Date>2015-05-04T00:00:00+04:00</Date>
+    <case_no>IM193527</case_no>
+    <Case_title>Unable to install software because the symantec deleted</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Currently application is working fine without any issue.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>82</Sl_No>
+    <Date>2015-02-21T00:00:00+04:00</Date>
+    <case_no> SD293553</case_no>
+    <Case_title>FRU Power Supply is not responding in Mina</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Power supply has been restored by connecting power cable </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>82</Sl_No>
+    <Date>2015-05-04T00:00:00+04:00</Date>
+    <case_no>SD313134  </case_no>
+    <Case_title>Windows Reboot - MZAYEDPOCCRTARC.dof.abudhabi.gov</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>83</Sl_No>
+    <Date>2015-05-05T00:00:00+04:00</Date>
+    <case_no>SD313143</case_no>
+    <Case_title>“SMB Fragment Packet Found”</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Threat Traffic</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>hese alerts are coming because of new integration of windows devices with McAfee ESM</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>84</Sl_No>
+    <Date>2015-02-23T00:00:00+04:00</Date>
+    <case_no>SD293861 </case_no>
+    <Case_title>An account failed to log on for the user dof021511</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Legitimate traffic</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>84</Sl_No>
+    <Date>2015-05-06T00:00:00+04:00</Date>
+    <case_no>SD313524</case_no>
+    <Case_title>The router's configuration was changed - 172.25.250.4</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Configuration changes</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Daily operations, change is legitimate</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>85</Sl_No>
+    <Date>2015-02-23T00:00:00+04:00</Date>
+    <case_no>SD293893</case_no>
+    <Case_title>EphoneIP:socket </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>closed</Status>
+    <Comments>Due to link down logs generated</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>85</Sl_No>
+    <Date>2015-05-06T00:00:00+04:00</Date>
+    <case_no>SD313525</case_no>
+    <Case_title>Threshold: CPU Utilization -172.24.2.1,172.25.250.3</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>SNMP service engine for 5 sec, now it has been normalized</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>86</Sl_No>
+    <Date>2015-02-23T00:00:00+04:00</Date>
+    <case_no>SD294074</case_no>
+    <Case_title>vpn Auth failed</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>sySTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>User not in VPN group</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>86</Sl_No>
+    <Date>2015-05-10T00:00:00+04:00</Date>
+    <case_no>IM194098 </case_no>
+    <Case_title>Firewall open port request TICKET NO FW75201592</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Request changes are implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>87</Sl_No>
+    <Date>2015-02-23T00:00:00+04:00</Date>
+    <case_no>IM184656</case_no>
+    <Case_title>FIREWALL OPEN REQUEST</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Access provided</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>87</Sl_No>
+    <Date>2015-05-10T00:00:00+04:00</Date>
+    <case_no>IM194110 </case_no>
+    <Case_title>Firewall open port request TICKET NO FW75201590</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Request changes are implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>88</Sl_No>
+    <Date>2015-05-10T00:00:00+04:00</Date>
+    <case_no>IM193615</case_no>
+    <Case_title>Firewall open port request TICKET NO FW45201587</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Request changes are implemented</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>89</Sl_No>
+    <Date>2015-02-24T00:00:00+04:00</Date>
+    <case_no>SD291514</case_no>
+    <Case_title>Anti virus in yellow</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Anti Virus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>User confirm to close the ticket</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>89</Sl_No>
+    <Date>2015-05-10T00:00:00+04:00</Date>
+    <case_no>SD314471</case_no>
+    <Case_title>Notification of a MAC address moving as per configuration”</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Network</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>90</Sl_No>
+    <Date>2015-02-24T00:00:00+04:00</Date>
+    <case_no>SD294554</case_no>
+    <Case_title>An account failed to log on for the user dof021511</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Account  password changed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>90</Sl_No>
+    <Date>2015-05-11T00:00:00+04:00</Date>
+    <case_no>IM194375</case_no>
+    <Case_title>Unable to login</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Reset the password in firewall</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>91</Sl_No>
+    <Date>2015-05-11T00:00:00+04:00</Date>
+    <case_no>SD315021</case_no>
+    <Case_title>Virus Infected Desktops</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>PC are scanned , need to check and closed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>93</Sl_No>
+    <Date>2015-02-27T00:00:00+04:00</Date>
+    <case_no> SD295326</case_no>
+    <Case_title>Acs configuration changes</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Legitimate activity</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>94</Sl_No>
+    <Date>2015-03-01T00:00:00+04:00</Date>
+    <case_no>SD295454 </case_no>
+    <Case_title>Kerberos pre-authentication failed for the user bashar.</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>wrong password was the issue.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>95</Sl_No>
+    <Date>2015-03-01T00:00:00+04:00</Date>
+    <case_no>SD295472 </case_no>
+    <Case_title>An account failed to log on for the user doc30870</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user is a legitimate user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>96</Sl_No>
+    <Date>2015-03-01T00:00:00+04:00</Date>
+    <case_no>SD295611 </case_no>
+    <Case_title>Deny IP due to Land Attack</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Configuration</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Traffic is Genuine</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>97</Sl_No>
+    <Date>2015-03-01T00:00:00+04:00</Date>
+    <case_no>IM185231</case_no>
+    <Case_title>A REQUEST FOR FIREWALL OPEN REQUEST APPROVED BY Bader Abdulla Alsuwaidi  PLEASE CREATE TICKET TO SEC</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>98</Sl_No>
+    <Date>2015-03-02T00:00:00+04:00</Date>
+    <case_no>SD296068</case_no>
+    <Case_title>Windows Reboot -172.25.50.238(webcustVtest.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>As the name implies its a test server kindly ignore.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>99</Sl_No>
+    <Date>2015-03-04T00:00:00+04:00</Date>
+    <case_no>SD296416 </case_no>
+    <Case_title>Support Group Access</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Support Group Access</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested acess given</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>100</Sl_No>
+    <Date>2015-03-04T00:00:00+04:00</Date>
+    <case_no>SD296540</case_no>
+    <Case_title>System Restart Required </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Solved Successfully as the user request.I reset Device 172.29.15.68 Shift Manager Office.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>101</Sl_No>
+    <Date>2015-03-04T00:00:00+04:00</Date>
+    <case_no>SD296647 </case_no>
+    <Case_title>Symantec Endpoint Protection - Outdated Version Systems</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Ginni</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Most of systems has been update with symantec new version and we will log a new case if we find any other machines not updated with new version.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>102</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>SD296783  </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>User not in VPN List</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>103</Sl_No>
+    <Date>2015-03-02T00:00:00+04:00</Date>
+    <case_no>IM185533</case_no>
+    <Case_title>FIREWALL OPEN IS APPROVED BY بدر عبدالله احمد السويدي, TICKET NO FW23201550</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>104</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>IM185922 </case_no>
+    <Case_title> Internet is not working at MINA</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Critical</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>105</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>IM185915 </case_no>
+    <Case_title>Internet issue</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Critical</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>106</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>IM185927</case_no>
+    <Case_title>Archiving system not working at all Alain sites</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Critical</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue has been resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>107</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>IM185842</case_no>
+    <Case_title>Firewall port opening request : FW23201552</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>108</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>IM185914</case_no>
+    <Case_title>Internet not working</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Critical</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>109</Sl_No>
+    <Date>2015-03-05T00:00:00+04:00</Date>
+    <case_no>SD297042</case_no>
+    <Case_title>                                                                     DOFSOC  Network Fluctuating  </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Critical</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issuse solved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>110</Sl_No>
+    <Date>2015-03-06T00:00:00+04:00</Date>
+    <case_no>SD297045  </case_no>
+    <Case_title>Windows Reboot - FINMBX02.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This because of DR Test Activity</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>111</Sl_No>
+    <Date>2015-03-08T00:00:00+04:00</Date>
+    <case_no>SD297233   </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>User not in VPN List</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>112</Sl_No>
+    <Date>2015-03-08T00:00:00+04:00</Date>
+    <case_no>SD297450 </case_no>
+    <Case_title>Windows Reboot - 172.25.85.13 (ADFINTMAT)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Legitimate activity</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>113</Sl_No>
+    <Date>2015-03-08T00:00:00+04:00</Date>
+    <case_no>SD297459 </case_no>
+    <Case_title>Dhabi Database Delete command events</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Delete Events</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Application Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Below Users are system schemas its a system proceeses and its not related to any individual user.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>114</Sl_No>
+    <Date>2015-03-08T00:00:00+04:00</Date>
+    <case_no>SD297461 </case_no>
+    <Case_title>Windows Reboot - 172.25.51.22 (ADFINEPO.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The server is owned by security team which is McAfee ePO server,</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>115</Sl_No>
+    <Date>2015-03-09T00:00:00+04:00</Date>
+    <case_no>IM185998</case_no>
+    <Case_title>web service for Mobile Application and already used for dhabi application </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>116</Sl_No>
+    <Date>2015-03-09T00:00:00+04:00</Date>
+    <case_no>SD297752</case_no>
+    <Case_title> Windows Reboot - 172.25.51.92 (EPO-P-HQ-02.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Known activity which was done by security team due to some patches update</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>117</Sl_No>
+    <Date>2015-03-10T00:00:00+04:00</Date>
+    <case_no>IM186012</case_no>
+    <Case_title>Al Ain DR DC Access</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>118</Sl_No>
+    <Date>2015-03-10T00:00:00+04:00</Date>
+    <case_no>IM186361</case_no>
+    <Case_title>web service for Mobile Application (pension,customs,Time attendance,ADERP) </Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>119</Sl_No>
+    <Date>2015-03-10T00:00:00+04:00</Date>
+    <case_no>SD298072</case_no>
+    <Case_title>To remove P2P software installed on one of the machine</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>I check the machine and the p2p its not installed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>120</Sl_No>
+    <Date>2015-03-11T00:00:00+04:00</Date>
+    <case_no>SD296883</case_no>
+    <Case_title>Installing symantec antivirus and Mcafee agent</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Antivirus has been installed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>121</Sl_No>
+    <Date>2015-03-11T00:00:00+04:00</Date>
+    <case_no>SD298393</case_no>
+    <Case_title>BI Publisher Enterprise - SD298393</Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Nabhan</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issues resolved</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>122</Sl_No>
+    <Date>2015-03-11T00:00:00+04:00</Date>
+    <case_no>SD298525</case_no>
+    <Case_title>Dashboard PC is restarting again &amp; again and showing error</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>PC Error</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the PC is working well</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>123</Sl_No>
+    <Date>2015-03-11T00:00:00+04:00</Date>
+    <case_no>SD297409</case_no>
+    <Case_title>ADD New Staff IT  </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Access Provided</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>124</Sl_No>
+    <Date>2015-03-12T00:00:00+04:00</Date>
+    <case_no>SD296918</case_no>
+    <Case_title>FIREWALL OPEN IS APPROVED TICKET NO FW53201554</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Access Provided</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>125</Sl_No>
+    <Date>2015-03-13T00:00:00+04:00</Date>
+    <case_no>SD298910</case_no>
+    <Case_title>“Native VLAN Mismatch discovered” </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Switch replacement activity was in process</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>127</Sl_No>
+    <Date>2015-03-17T00:00:00+04:00</Date>
+    <case_no>SD299650</case_no>
+    <Case_title>Reboot to update symantec at meena site</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Mina Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Restarted</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>128</Sl_No>
+    <Date>2015-03-17T00:00:00+04:00</Date>
+    <case_no>SD299654</case_no>
+    <Case_title>Restart to update symantec at khatim site</Case_title>
+    <location>ADAC</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Khatim Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>symantic has been updated in all CCTV users</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>129</Sl_No>
+    <Date>2015-03-17T00:00:00+04:00</Date>
+    <case_no>SD299758</case_no>
+    <Case_title>user deleted observed </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Delete Events</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Legitimate activity</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>130</Sl_No>
+    <Date>2015-03-17T00:00:00+04:00</Date>
+    <case_no>SD299770</case_no>
+    <Case_title>Installing symantec antivirus</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Onsite Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Installed successfully</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>131</Sl_No>
+    <Date>2015-03-17T00:00:00+04:00</Date>
+    <case_no>SD299659</case_no>
+    <Case_title>Restart to update symantec at Mezyad site</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Mezyad support team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Successfully restarted</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>132</Sl_No>
+    <Date>2015-03-18T00:00:00+04:00</Date>
+    <case_no>SD299921</case_no>
+    <Case_title>FRU Power Supply is not responding </Case_title>
+    <location>Sila</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Duplicate of IM187087</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>133</Sl_No>
+    <Date>2015-03-18T00:00:00+04:00</Date>
+    <case_no>SD300168</case_no>
+    <Case_title>A member was removed from a security-enabled global group</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Delete Events</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Removed to avoid  group policy conflict for My documents redirection</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>135</Sl_No>
+    <Date>2015-03-18T00:00:00+04:00</Date>
+    <case_no>SD300177</case_no>
+    <Case_title>Uninstall Torrent Softwares</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Restricted Application</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Solved Successfully as the user request uninstall Bit Torrent software.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>137</Sl_No>
+    <Date>2015-03-19T00:00:00+04:00</Date>
+    <case_no>SD300527</case_no>
+    <Case_title>Cisco Configuration changes</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Authorized user, Daily Operations.
+</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>138</Sl_No>
+    <Date>2015-03-20T00:00:00+04:00</Date>
+    <case_no>SD300537 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.19 (ADGOVDC2.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The server was windows updated   </Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>140</Sl_No>
+    <Date>2015-03-22T00:00:00+04:00</Date>
+    <case_no>SD300864 </case_no>
+    <Case_title>Symantec Endpoint Protection - Antvirus</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus Rollback</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>SEPM has been installed</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>141</Sl_No>
+    <Date>2015-03-22T00:00:00+04:00</Date>
+    <case_no>SD300911 </case_no>
+    <Case_title>Unable to push SEPM clients</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus Access</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Instructions provided by email</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>142</Sl_No>
+    <Date>2015-03-22T00:00:00+04:00</Date>
+    <case_no>IM187362</case_no>
+    <Case_title>open customs ports for the use of archiving system</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>143</Sl_No>
+    <Date>2015-03-23T00:00:00+04:00</Date>
+    <case_no>SD301046 </case_no>
+    <Case_title>Windows Reboot - 172.23.58.24 (HILICCTVDIR.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>144</Sl_No>
+    <Date>2015-03-23T00:00:00+04:00</Date>
+    <case_no>SD301156 </case_no>
+    <Case_title>SEPM Client Installation on DOFIT6ARESH</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>SEPM has installed sucessfully.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>145</Sl_No>
+    <Date>2015-03-23T00:00:00+04:00</Date>
+    <case_no>SD301159 </case_no>
+    <Case_title>Symantec Endpoint Protection - Antvirus on Hilishiftmgr</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>146</Sl_No>
+    <Date>2015-03-23T00:00:00+04:00</Date>
+    <case_no>SD301182 </case_no>
+    <Case_title>Symantec Endpoint Protection - Antvirus on POSADM20313</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>SEPM has Installed successful.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>147</Sl_No>
+    <Date>2015-03-23T00:00:00+04:00</Date>
+    <case_no>SD301250 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>High</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>The user is a legitimate VPN user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>148</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>SD301384 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.122 (FINJOR01.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This is not a production server kindly remove from monitoring</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>151</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>IM187980</case_no>
+    <Case_title>REQUEST FOR FIREWALL (FW233201563)</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>152</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>IM187802</case_no>
+    <Case_title>A request for firewall open -FW223201562</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>153</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>IM188078</case_no>
+    <Case_title>A request for firewall open port FW243201565</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Rajesh</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Requested changes has been implemented.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>154</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>SD301610</case_no>
+    <Case_title>Need to update and scan the PC : 172.27.15.24 </Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Updation and scanning of the system is completed.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>155</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>SD301611</case_no>
+    <Case_title>Need to update and scan the PC : 172.23.92.36</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Updation and scanning of the system is completed.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>156</Sl_No>
+    <Date>2015-03-24T00:00:00+04:00</Date>
+    <case_no>SD301609</case_no>
+    <Case_title>SMB Fragment Packet Found</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Sirt Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>worngly assignd to time attendance.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>157</Sl_No>
+    <Date>2015-03-25T00:00:00+04:00</Date>
+    <case_no>SD301965</case_no>
+    <Case_title>VPN failed logins followed by successful login</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Events are know to the user</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>158</Sl_No>
+    <Date>2015-03-26T00:00:00+04:00</Date>
+    <case_no>SD302140</case_no>
+    <Case_title>ephone:IP:socket:device Type:has unregistered normally</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Voice Gateway activity is in process</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>160</Sl_No>
+    <Date>2015-03-26T00:00:00+04:00</Date>
+    <case_no>SD302290 </case_no>
+    <Case_title>Threshold: CPU Utilization</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>161</Sl_No>
+    <Date>2015-03-26T00:00:00+04:00</Date>
+    <case_no>SD302307 </case_no>
+    <Case_title>System Reatart on MINACC002390 </Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>We have uninstalled the old antivirus which has been corrupted and installed symantec antivirus new version successfully.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>162</Sl_No>
+    <Date>2015-03-26T00:00:00+04:00</Date>
+    <case_no>SD302310 </case_no>
+    <Case_title>Guest Authentication Failed</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>its normal events</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>163</Sl_No>
+    <Date>2015-03-27T00:00:00+04:00</Date>
+    <case_no>SD302314</case_no>
+    <Case_title>Unparsed Events</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device Warning</Types_of_Attack>
+    <priority>low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>network Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Issue is resolved we are nor receiving logs for the same</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>165</Sl_No>
+    <Date>2015-03-29T00:00:00+04:00</Date>
+    <case_no>SD302419 </case_no>
+    <Case_title>Hyperian Database Delete command events</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>Database Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>This transaction done by the system user CLACMGR and its normal transaction done when the system run calculations</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>166</Sl_No>
+    <Date>2015-03-29T00:00:00+04:00</Date>
+    <case_no>SD302427 </case_no>
+    <Case_title>Install Symantec end point protection-Mezyad</Case_title>
+    <location>Mezyad</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>167</Sl_No>
+    <Date>2015-03-29T00:00:00+04:00</Date>
+    <case_no>SD302428 </case_no>
+    <Case_title>Install Symantec end point protection- Al Ain</Case_title>
+    <location>DOF_DR</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>168</Sl_No>
+    <Date>2015-03-29T00:00:00+04:00</Date>
+    <case_no>SD302577</case_no>
+    <Case_title>Need to update and scan the PC : 10.25.158.94</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Antivirus</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+</DocumentElement>

@@ -1,0 +1,361 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+  background-color: #000;
+}
+#curve_chart,.bottomChartsCon {
+    width: 98%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    padding: 20px 0;
+    margin: 0px auto;
+    overflow: hidden;
+    border: 2px solid rgba(0255, 255, 255, 0.3);
+
+}
+
+#curve_chart{
+    background-color: #171717;
+}
+#curve_chart{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.bottomChartsCon{
+    border: 1px solid transparent;
+}
+
+
+@font-face {
+    font-family: robotoLight;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: robotoRegular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: robotomedium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+.tableParentMobile {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tableParent, .tableParentMobile {
+    width: 98%;
+    height: 375px;
+   position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid rgba(0255, 255, 255, 0.3);
+    background-color: #000;
+
+}
+
+h1 {
+    text-align: center;
+    line-height: 55px;
+    font-family: robotoLight;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 3px -6px rgba(255,255,255,0.4);
+}
+#tableheader {
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+    background-color: #666666;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: robotoRegular;
+
+    overflow: hidden;
+}
+
+.thData {
+    float: left;
+    word-wrap: break-word;
+}
+
+.divRow {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0255, 255, 255, 0.3);
+    background-color: #000;
+    color: #fff;
+}
+
+.divData {
+    float: left;
+    word-wrap: break-word;
+    font-size: 12px;
+    font-family: robotolight;
+    margin: 10px auto 10px auto;
+
+}
+
+#tablebodydata {
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: auto;
+
+
+}
+
+
+
+
+.rowData {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.keyValue {
+    overflow: hidden;
+    padding: 5px;
+    background-color: #000000;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.key {
+    width: 45%;
+    float: left;
+    font-family: robotomedium;
+    font-size: 12px;
+    margin: 3px;
+
+}
+
+.value {
+    width: 48%;
+    float: left;
+    font-family: robotoLight;
+    margin: 3px;
+    font-size: 12px;
+}
+
+.mobileheader {
+    position: fixed;
+
+    font-family: robotoLight;
+    font-size: 17px;
+    line-height: 28px;
+    padding-left: 10px;
+
+}
+
+.keyValue:nth-child(odd) {
+
+}
+.tableDta{
+    width: 100%;
+    position: relative;
+    height: 375px;
+
+}
+.divData:nth-child(1),.thData:nth-child(1){
+    width: 4%;
+
+}
+
+.divData:nth-child(2), .thData:nth-child(2) {
+    width: 8%;
+
+}
+
+.divData:nth-child(3), .thData:nth-child(3) {
+    width: 10%;
+
+}
+
+.divData:nth-child(4), .thData:nth-child(4) {
+    width:16%;
+
+}
+
+.divData:nth-child(5), .thData:nth-child(5) {
+    width: 7%;
+
+}
+
+.divData:nth-child(6), .thData:nth-child(6) {
+    width: 12%;
+
+}
+
+.divData:nth-child(7), .thData:nth-child(7) {
+    width: 5%;
+
+}
+
+.divData:nth-child(8), .thData:nth-child(8) {
+    width:11%;
+
+}
+
+.divData:nth-child(9), .thData:nth-child(9) {
+    width: 10%;
+
+}
+
+.divData:nth-child(10), .thData:nth-child(10) {
+    width: 17%;
+
+}
+.lineChart{
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.barchartDiv{
+    position: relative;
+    width: 32.4%;
+    margin: 0;
+    border: 2px solid rgba(0255, 255, 255, 0.3);
+    float: left;
+    background-color: #171717;
+}
+.barchartDivRight{
+    float: right;
+}
+.barchartDiv:nth-child(2){
+    left: 1%;
+}
+#barchart_material,#piechart{
+    width: 99%;
+
+
+
+}
+#piechart{
+    width: 99%;
+
+}
+.ticketsCount{
+    width: 28%;
+    height: 260px;
+    float: left;
+    position: relative;
+    border: 2px solid rgba(0255, 255, 255, 0.3);
+    padding-bottom: 40px;
+    margin: 0px 0 0px 2.2%;
+    background-color: #171717;
+    color: #fff;
+}
+.ticketsCount h3,.barchartDiv h3,.barchartDiv h3{
+    text-align: center;
+    line-height: 40px;
+    font-family: robotolight;
+    background-color: #171717;
+    color: #fff;
+}
+.ticketsCircle{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border:1px solid #e2e2e2;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+    font-family: robotomedium;
+    box-shadow:inset 0 0 40px rgba(255,255,255,0.9);
+
+}
+.popupDiv{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+    background-color: #000000;
+    display: none;
+}
+#chartPlace{
+    width:90%;
+    height: 90%;
+    margin: auto;
+    position: absolute;
+    top:0;
+    bottom:0; left : 0;
+    right: 0;
+    border: 1px solid rgba(0255,255,255,0.3);
+}
+
+#closeRackOne {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    border-radius: 100%;
+    background-image: url("../assets/close.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: -1px -1px;
+    cursor: pointer;
+    background-color: #ffffff;
+    z-index: 1000;
+
+}
+.divRow .divData:first-child{
+    display: none;
+}
+#tableheader .thData:first-child{
+    display: none;
+}
+.rowData .keyValue:first-child{
+    display: none;
+}
+.mainButtons{
+    position: absolute;
+    top:7px;
+    right: 20px;
+
+}
+.mainButtons .mainButt{
+    float: left;
+   line-height: 35px;
+    margin-left: 10px;
+    border: 1px solid rgba(0255, 255, 255, 0.3);
+    color: #fff;
+    padding: 0 15px 0 15px;
+    font-family: robotomedium ;
+    cursor: pointer;
+
+}
+
+.mainButtons .mainButt.active{
+    background-color: rgba(0255, 255, 255, 0.3);
+}
+.ticketCountCh{
+    position: absolute;
+    right: 30px;
+    color: white;
+    bottom: 20px;
+    font-family:robotomedium;
+}
+#ticketsCountCh{
+    color: #C83100;
+    font-size: 20px;
+}

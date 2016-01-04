@@ -1,0 +1,90 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #555555;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-image: url("../Assets/flower.png");
+	background-position: center center;
+}
+ul,li,p,a,img,h1,h2,h3,h4,h5,h6,hr{
+	margin: 0;
+	padding: 0;
+}
+#menu-wrap{
+	width: 266px;
+	position: fixed;
+	top: 0;
+	left: 80px;
+	padding: 50px 0;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9a5822+0,7e3a11+100&amp;1+0,0.69+100 */
+	background: -moz-linear-gradient(-45deg,  rgba(154,88,34,1) 0%, rgba(126,58,17,0.69) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(154,88,34,1) 0%,rgba(126,58,17,0.69) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(154,88,34,1) 0%,rgba(126,58,17,0.69) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a5822', endColorstr='#b07e3a11',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-repeat: no-repeat;
+	-webkit-border-bottom-right-radius: 25px;
+	-webkit-border-bottom-left-radius: 25px;
+	-moz-border-radius-bottomright: 25px;
+	-moz-border-radius-bottomleft: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	z-index: 999;
+	-webkit-transform: translateZ(0);
+	top: -538px;
+}
+#logo_img{
+	margin-left: 52px;
+	margin-top: -60px;
+}
+.menu-toggle {
+	position: absolute;
+	bottom: 0;
+	left: 117px;
+	background-color:#fff;
+	margin-bottom: 5px;
+	text-align: center;
+	border-radius: 50px;
+}
+#iconHolder ul li{
+	list-style: none;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color:#fff;
+	border-bottom: 1px solid #cb8449;
+	font-family: sans-serif;
+}
+#logosmall{
+	position: relative;
+	left: 83px;
+	display: none;
+}
+#iconHolder ul li:hover{
+	background-color:#cb8449;
+}
+.menu-toggle p{
+	height: 40px;
+	width: 40px;
+	background-image: url("../Assets/arrow_top.png");
+	background-size: 40%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.menu-toggle p:hover{
+	cursor: pointer;
+}
+.footer_text{
+	margin-top: 80px;
+	font-size: 10px;
+	color: #999;
+}
+#login_button{
+	background-color: #ef3f43;
+}
+#login_button:hover{
+	color: #fff;
+}
+#login-alert{
+	margin-top: 20px;
+}

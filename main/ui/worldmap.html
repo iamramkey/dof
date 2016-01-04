@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/worldmap.css" />
+    <link rel="stylesheet" href="styles/login.css">
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/worldmap.js"></script>
+    <script src="scripts/menu.js"></script>
+</head>
+<body>
+     <?php include 'menu.html'; ?>
+<div id="header">
+	<div class="center">
+		<div id="headerText">World Map</div>
+		<div id="screen">
+			<div id="vpn" class="button">VPN</div>
+			<div id="blacklist" class="button">Blacklisted</div>
+			<div id="public" class="button active">Public</div>
+		</div>
+		<div clear=""></div>
+	</div>
+</div>
+<div id="loader"></div>
+<div id="mapCanvas"></div>
+</body>
+</html>

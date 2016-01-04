@@ -1,0 +1,148 @@
+#logo_img{
+    margin-left: 52px;
+}
+#logosmall{
+    position: relative;
+    left: 83px;
+    display: none;
+}
+.menu-toggle {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    background-color:#fff;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: -2px -2px 0 rgba(0,0,0,.1);
+}
+ul,li,p,a,img,h1,h2,h3,h4,h5,h6,hr{
+    margin: 0;
+    padding: 0;
+}
+#iconHolder ul li{
+    font-family: Helvetica, sans-serif !important;
+    font-size: 14px;
+    list-style: none;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    color:#333;
+    border-bottom: 1px solid #bbb;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size:32px;
+    cursor: pointer;
+}
+#iconHolder ul li:hover{
+    background-color:rgba(0,0,0,.1);
+}
+#overview{
+    background-image: url(../assets/1overview.png);
+}
+#incidentoverview{
+    background-image: url(../assets/2incidentoverview.png);
+}
+#datacenter{
+    background-image: url(../assets/5datacenter.png);
+}
+#worldmap{
+    background-image: url(../assets/4worldmap.png);
+}
+#security{
+    background-image: url(../assets/3security.png);
+}
+#video{
+    background-image: url(../assets/7video.png);
+}
+#rSS{
+    background-image: url(../assets/6rss.png);
+}
+#custom{
+    background-image: url(../assets/8calendar.png);
+}
+#logout{
+    background-image: url(../assets/logout.png);
+}
+
+#animation{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 50px;
+    bottom: 3px;
+    border-radius: 20px;
+    background-size: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.2);
+    box-shadow: 2px 2px 0 rgba(0,0,0,.1);
+    cursor: pointer;
+}
+#animation.pause{
+    background-image: url(../assets/pause-512.png);
+}
+#animation.play{
+    background-position: 11px center;
+    background-image: url(../assets/play-512.png);
+}
+#animation:hover{
+    background-color:rgba(0,0,0,.3);
+}
+
+#menu-wrap{
+    width: 266px;
+    position: fixed;
+    left: 80px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100&amp;0.4+0,0.4+100 */
+    background: -moz-linear-gradient(left,  rgba(238,238,238,0.4) 0%, rgba(204,204,204,0.4) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(238,238,238,0.4) 0%,rgba(204,204,204,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(238,238,238,0.4) 0%,rgba(204,204,204,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66eeeeee', endColorstr='#66cccccc',GradientType=1 ); /* IE6-9 */
+    -webkit-border-bottom-right-radius: 25px;
+    -webkit-border-bottom-left-radius: 25px;
+    -moz-border-radius-bottomright: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    z-index: 1001;
+    -webkit-transform: translateZ(0);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-top: 0px solid #ccc;
+    border: 1px solid rgba(0,0,0,.1);
+    transition: .5s top ease-in;
+    top:-590px;
+}
+#menu-wrap.active{
+    top:0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D */
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(left,  #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #eeeeee 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #eeeeee 0%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+}
+#menu-wrap:hover{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D */
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(left,  #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #eeeeee 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #eeeeee 0%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+}
+.menu-toggle p{
+    margin:0;
+    height: 40px;
+    width: 40px;
+    background-image: url("../Assets/arrow_top.png");
+    background-size: 40%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.menu-toggle p:hover{
+    cursor: pointer;
+}

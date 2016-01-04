@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.navbar-header {
+    width: 100%;
+}
+#header{
+    box-shadow: 0 3px 5px rgba(0,0,0,.1);
+    position: relative;
+    z-index: 1;
+}
+#header .navbar{
+    margin-bottom: 0;
+}
+
+.icon_align {
+    margin : 10px;
+}
+#content{
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 10px;
+    display: none;
+}
+#user_data{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    border-top: 1px solid #DDDDDD;
+}
+#message{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 36%;
+    padding:5px 10px;
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    display: none;
+}
+.error{
+    background-color: rgba(255,100,0,.3);
+}
+.success{
+    background-color: rgba(0,160,0,.3);
+}
+.waiting{
+    background-color: rgba(255,191,0,.5);
+}
+.waiting:before{
+    content: '';
+    display: inline-block;
+    margin-bottom:-10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/335.gif);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 24px;
+}
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background-color: rgba(255,255,255,.7);
+    background-image: url(../img/335.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 64px;
+}
+#preloader.inactive{
+    display: none;
+}
+
+#login{
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 100;
+    display: block;
+}
+#login-alert{
+    display: none;
+}
+.table.table-striped.table-bordered{
+    border-top: 0 solid #ffffff;
+}
+#logoutButton{
+    margin-left: 5px;
+    padding-top: 7px;
+    display: none;
+}

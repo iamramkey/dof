@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <HPSMTickets>
+    <Sl_No>1</Sl_No>
+    <Date>2015-01-04T00:00:00+04:00</Date>
+    <case_no>SD282856</case_no>
+    <Case_title>High number of traffic from unity server towards malicious website</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>2</Sl_No>
+    <Date>2015-01-10T00:00:00+04:00</Date>
+    <case_no>SD284041</case_no>
+    <Case_title>“A process has exited” (MEZDC2.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>2</Sl_No>
+    <Date>2015-01-10T00:00:00+04:00</Date>
+    <case_no>SD284041</case_no>
+    <Case_title>“A process has exited” (MEZDC2.dof.abudhabi.gov)</Case_title>
+    <location>KPDC</location>
+    <Types_of_Attack>De warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Prasanna</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>3</Sl_No>
+    <Date>2015-01-19T00:00:00+04:00</Date>
+    <case_no>SD285956</case_no>
+    <Case_title>System not reflecting on SEPM</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Support Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>4</Sl_No>
+    <Date>2015-01-20T00:00:00+04:00</Date>
+    <case_no>SD286244  </case_no>
+    <Case_title>Top Active Botnet” found , Affected Device : 172.25.0.195</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SIRT Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>5</Sl_No>
+    <Date>2015-01-23T00:00:00+04:00</Date>
+    <case_no>SD286934</case_no>
+    <Case_title>Deny Inbound UDP</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>6</Sl_No>
+    <Date>2015-01-27T00:00:00+04:00</Date>
+    <case_no>SD287856 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>Since the user dof000935 is not part of VPN Domain and we have not observe any new event. Hence closing this case</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>7</Sl_No>
+    <Date>2015-01-28T00:00:00+04:00</Date>
+    <case_no>SD287861</case_no>
+    <Case_title>Windows Reboot</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>kaleem</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>8</Sl_No>
+    <Date>2015-01-28T00:00:00+04:00</Date>
+    <case_no>SD286908</case_no>
+    <Case_title>Request to open firewall Port</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Work in progress</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>9</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288178 </case_no>
+    <Case_title>Microsoft Windows SMB NTLM Authentication Lack of Entropy Vulnerability</Case_title>
+    <location>Mina</location>
+    <Types_of_Attack>Application Vulnerability</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>10</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288327</case_no>
+    <Case_title>Issue with link (Sathish)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>Network Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>11</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288389</case_no>
+    <Case_title>Windows Reboot - 172.31.12.100 (KHCCTVDIR.dof.abudhabi.gov) and 172.25.50.40 (FinHVhost02.dof.abudhabi.gov)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the restart is required for the installation of the reporting system</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>12</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288405</case_no>
+    <Case_title>Windows: User account created</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Configuration</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>is is a legitimate act for new reporting server installation.</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>13</Sl_No>
+    <Date>2015-01-29T00:00:00+04:00</Date>
+    <case_no>SD288437 </case_no>
+    <Case_title>VPN Failed Authentication</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Machamma</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>the user name is Sarah AbdulQader AlMenhali and shae does not have VPN access</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>14</Sl_No>
+    <Date>2015-01-30T00:00:00+04:00</Date>
+    <case_no>SD288448</case_no>
+    <Case_title>Windows Reboot - 172.25.50.21 (FINPRN1.dof.abudhabi.gov) and 172.25.50.55 (FINHR01)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Firasat</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Closed</Status>
+    <Comments>this is an approved change CR # C12185  to shift virtual servers</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>15</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288477 </case_no>
+    <Case_title>An account failed to log on for the user dof33621</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Brute Force</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>16</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288557 </case_no>
+    <Case_title>Windows Reboot - 172.25.50.57 finarc-ver.dof.abudhabi.gov</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Device warning</Types_of_Attack>
+    <priority>Low</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SYSTEM Admin</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+  <HPSMTickets>
+    <Sl_No>17</Sl_No>
+    <Date>2015-02-01T00:00:00+04:00</Date>
+    <case_no>SD288568 </case_no>
+    <Case_title>Request to open firewall Port (FW12201539)</Case_title>
+    <location>DOF_HQ</location>
+    <Types_of_Attack>Firewall </Types_of_Attack>
+    <priority>Average</priority>
+    <Engineer_Name>Karthi</Engineer_Name>
+    <Pending_with>SOC Team</Pending_with>
+    <Status>Follow up</Status>
+    <Comments>Mail notification has been sent</Comments>
+  </HPSMTickets>
+</DocumentElement>

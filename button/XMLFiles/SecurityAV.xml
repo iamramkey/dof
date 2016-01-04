@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+    <SPYWare>
+        <TIMESTAMP>2015-02-02T01:00:00+04:00</TIMESTAMP>
+        <TYPES>spyware</TYPES>
+        <ATTACKERADDRESS>2887332379</ATTACKERADDRESS>
+        <IPADDRESS>172.25.50.27</IPADDRESS>
+        <ACTION>sinkhole</ACTION>
+        <DEVICEHOSTNAME>PA-3050-HQ-FW2</DEVICEHOSTNAME>
+        <LOCATION>DOF_HQ</LOCATION>
+        <SUMAGG>217</SUMAGG>
+    </SPYWare>
+</DocumentElement>

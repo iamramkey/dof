@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOF</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="menu-wrap">
+    <div id="menu">
+        <a id="logo" title="Department of Finance" href="javascript:void(0)">
+            <img src="Assets/sample_logo.png" width="170" alt="Logo" id="logo_img">
+        </a>
+        <div id="iconHolder">
+            <ul>
+                <li>Overview</li>
+                <li>Incident Overview</li>
+                <li>Security</li>
+                <li>World Map</li>
+                <li>Data Center</li>
+                <li>Video</li>
+                <li>RSS</li>
+                <li>Custom Data</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+        <div class="menu-toggle">
+            <p></p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('.menu-toggle').on('click',function(){
+        var menu_height = $('#menu-wrap').height() + 50;
+        if ($(this).data('active') == 'yes') {
+            $('#menu-wrap').stop(true, true).animate({top: 0}, '5000', 'swing');
+            $(this).data('active', 'no');
+            $('.menu-toggle').css({
+                'transform': 'rotate(0deg)'
+            });
+        } else {
+            $('#menu-wrap').stop(true, true).animate({top: -menu_height}, '5000', 'swing');
+            $(this).data('active', 'yes');
+            $('.menu-toggle').css({
+                'transform': 'rotate(180deg)'
+            });
+        }
+    });
+    $('.menu-toggle').data('active', 'yes').css({
+        'transform': 'rotate(180deg)'
+    });
+</script>
+</html>

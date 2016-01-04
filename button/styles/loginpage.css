@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #555555;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-image: url("../assets/flower.png");
+    background-position: center center;
+}
+ul,li,p,a,img,h1,h2,h3,h4,h5,h6,hr{
+    margin: 0;
+    padding: 0;
+}
+.footer_text{
+    margin-top: 80px;
+    font-size: 10px;
+    color: #999;
+}
+#login_button{
+    background-color: #ef3f43;
+}
+#login_button:hover{
+    color: #fff;
+}
+#login-alert{
+    margin-top: 20px;
+}

@@ -1,0 +1,1 @@
+c:\wamp\bin\php\php5.5.12\php.exe -f c:\wamp\www\congress\d\index.php

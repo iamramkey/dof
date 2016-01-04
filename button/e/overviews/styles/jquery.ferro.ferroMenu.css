@@ -1,0 +1,118 @@
+.ferromenu-controller {
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 100px;
+	/*margin:10px;*/
+	text-align: center;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #094ab2;
+	color: #fff;
+	font-size: 16px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.ferromenu-controller.big {
+	width: 200px;
+	height: 200px;
+}
+.ferromenu-controller .label {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	margin-top: 35px;
+	font-size: 1em;
+	line-height: 1em;
+}
+.ferromenu-controller.big {
+	width: 200px;
+	height: 200px;
+}
+.ferromenu-controller.big .label {
+	font-size: 2em;
+	line-height: 2em;
+}
+/*
+.ferromenu-controller.open .label{
+	-webkit-transform : rotate(45deg);
+	-moz-transform : rotate(45deg);
+	-ms-transform : rotate(45deg);
+	-o-transform : rotate(45deg);
+	transform : rotate(45deg);
+}*/
+
+.ferromenu-controller.desktop:hover,
+.ferromenu-controller.mobile:active {
+	background-color: rgba(255, 255, 255, .3);
+	background-image: url(../assets/buttonbg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#nav li, #nav2 li {
+	color: #fff;
+	text-align: center;
+}
+#nav li, #nav2 li {
+	font-size: 1em;
+	color: #fff;
+	text-decoration: none;
+	width: 80px;
+	height: 80px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	line-height: 80px;
+	background-color: #57595b;
+	position: relative;
+}
+#nav.big li {
+	font-size: 2em;
+	width: 160px;
+	height: 160px;
+	line-height: 160px;
+}
+#nav .pop {
+	position: absolute;
+	right: 120%;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	padding: 0 20px;
+	color: #094ab2;
+	top: 50%;
+	margin-top: -1em;
+	background-color: #fff;
+	opacity: 0;
+	font-size: 1em;
+	line-height: 2em;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+#nav .pop:before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 7px solid #fff;
+	border-color: transparent transparent transparent #fff;
+	border-right: none;
+	right: -7px;
+	top: 50%;
+	margin-top: -7px;
+}
+#nav li:hover .pop {
+	right: 100%;
+	opacity: 1;
+}
+#nav li.desktop:hover, #nav2 li.desktop:hover,
+#nav li.mobile:active, #nav2 li.mobile:active {
+	background-color: transparent;
+	background-image: url(../assets/buttonbg5.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	cursor: pointer;
+}

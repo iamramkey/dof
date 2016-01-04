@@ -1,0 +1,138 @@
+html{
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+#header{
+    box-shadow: 0 3px 5px rgba(0,0,0,.1);
+    position: relative;
+    z-index: 1;
+}
+#header .navbar{
+    margin-bottom: 0;
+}
+.navbar-header {
+    width: 100%;
+}
+
+.icon_align {
+    margin : 10px;
+}
+#logoutButton{
+    margin-left: 5px;
+    padding-top: 7px;
+    display: none;
+}
+#message{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 36%;
+    padding:5px 10px;
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    display: none;
+}
+.error{
+    background-color: rgba(255,100,0,.3);
+}
+.success{
+    background-color: rgba(0,160,0,.3);
+}
+.waiting{
+    background-color: rgba(255,191,0,.5);
+}
+.waiting:before{
+    content: '';
+    display: inline-block;
+    margin-bottom:-10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/335.gif);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 24px;
+}
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background-color: rgba(255,255,255,.7);
+    background-image: url(../img/335.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 64px;
+}
+#preloader.inactive{
+    display: none;
+}
+
+#container{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding-top: 5px;
+}
+#container .cont:first-child{
+    border-top: none;
+}
+.cont{
+    padding-top: 10px;
+    height: 25%;
+    border-bottom: 1px solid #f7f7f7;
+    border-top: 1px solid #ddd;
+}
+
+#pageTitle{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#table{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,.8);
+    display: none;
+}
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    overflow-y: auto;
+}
+.table th{
+    font-weight: bold;
+}
+.modal.modal-wide .modal-dialog {
+    width: 90%;
+}
+#virusButtons{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 240px;
+    display: none;
+}

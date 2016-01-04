@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SQL Server - test@localhost" uuid="8a10c241-2fac-4b7f-99d7-d805b4914cf2">
+      <secret-storage>master_key</secret-storage>
+      <domain-auth>true</domain-auth>
+      <user-name>sa</user-name>
+      <schema-pattern>test.*</schema-pattern>
+      <default-schemas>test.*</default-schemas>
+    </data-source>
+    <data-source name="SQL Server - @localhost" uuid="87a9df0a-4d99-44b9-a224-010ef17290f1">
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <schema-pattern>master.*</schema-pattern>
+      <default-schemas>master.*</default-schemas>
+    </data-source>
+  </component>
+</project>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="styles/chartcss.css">
+    <link rel="stylesheet" href="styles/mediaScreenChart.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="scripts/loadXmlfilesdata.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+    <script type="text/javascript" src="scripts/chartApp.js"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/menu.js"></script>
+    </head>
+<body>
+        <?php include 'menu.html'; ?>
+    <h1>Reports</h1>
+    <div class="mainButtons">
+        <div class="mainButt active">OverView</div>
+        <div class="mainButt">Pending</div>
+    </div>
+    <div id="chartContainer">
+        <div class="lineChart">
+            <div class="bottomChartsCon">
+
+                <div class="barchartDiv" id="barChartZoom">
+                    <h3>Vulnerability wise chart</h3>
+
+                    <div class="bottomdiv" id="barchart_material"></div>
+                </div>
+
+
+                <div class="barchartDiv" id="loactionZoom">
+                    <h3>Vulnerability wise chart</h3>
+
+                    <div class="bottomdiv" id="loactionChart"></div>
+                </div>
+
+                <div class="barchartDiv barchartDivRight" id="pieChartZoom">
+                    <h3>Security wise chart</h3>
+                    <div class="bottomdiv" id="piechart"></div>
+                    <div class="ticketCountCh">Total Tickets: <span id="ticketsCountCh"></span></div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="tableDta" id="tableDatazoom">
+            <div class="tableParent" id="deskTable">
+                <div id="tableheader">
+                </div>
+                <div id="tablebodydata">
+
+                </div>
+            </div>
+            <div class="tableParentMobile" id="mobTable">
+                <div id="tablebodydataMobile">
+                </div>
+            </div>
+
+        </div>
+        <div class="lineChart" id="linechartDiv">
+            <div id="curve_chart"></div>
+        </div>
+    </div>
+    
+    <div class="popupDiv" id="popupDiv">
+        <div id="chartPlace"></div>
+        <div id="closeRackOne"></div>
+    </div>
+</body>
+</html>

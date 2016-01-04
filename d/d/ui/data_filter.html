@@ -1,0 +1,260 @@
+<!doctype html>
+<html ng-app="data_filter" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Data Filter</title>
+</head>
+
+<body ng-controller="appController">
+    <div id="header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <div class="navbar-brand">Brand</div>
+                    <div class="pull-right">
+                        <div id="logoutButton" class="pull-right" title="Logout Current Session">
+                            <button class="btn btn-danger">
+                                <span class="glyphicon glyphicon-off"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-brand pull-right">Brand</div>
+                    </div>
+                    <div id="message" class="waiting">
+                        Please make sure everything is filled correctly ssssssssss sf asdfa  afasfasd fdasasdfdas sfd
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div id="content">
+        <div class="container-fluid">
+            <div class="col-lg-12 data_search">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="btn-group col-xs-7" role="group" aria-label="...">
+                            <div class="btn-group" role="group" ng-click="showAdd()">
+                                <button type="button" class="btn btn-default" ng-disabled="add || edit || date"  title="Add a new row"><span class="glyphicon glyphicon-plus"></span>Add</button>
+                            </div>
+                            <div ng-click="showEdit()" class="btn-group" role="group">
+                                <button type="button" class="btn btn-default" ng-disabled="add || edit || date" title="Edit row"><span class="glyphicon glyphicon-edit"></span>Edit</button>
+                            </div>
+                            <div class="btn-group" role="group" ng-click="deleteRow()">
+                                <button type="button" class="btn btn-default" ng-disabled="add || edit || date" title="Delete selected row"><span class="glyphicon glyphicon-trash"></span>Delete</button>
+                            </div>
+                            <div class="input-group col-md-5" style="padding-left: 10px;">
+                                <input type="text" ng-model="search" class="form-control" ng-disabled="add || edit || date" placeholder="Search for..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button" ng-disabled="add || edit || date" title="Search in data">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="col-xs-8">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control" placeholder="From" ng-model="dateFrom" id="date_timepicker_start"><span class="input-group-btn" style="width:0px;"></span>
+                                    <input type="text" class="form-control" placeholder="To" id="date_timepicker_end" ng-model="dateTo">
+                                    <span class="input-group-btn" ng-show="date" ng-click="cancelDateSearch()">
+                                        <button type="button" class="btn btn-danger" title="Cancel Date search"><span class="glyphicon glyphicon-remove"></span></button>
+                                    </span>
+                                    <span class="input-group-btn" ng-click="dateSearch()" ng-show="!date">
+                                        <button type="button" class="btn btn-primary" ng-disabled="add || edit || date" title="Search with Date"><span class="glyphicon glyphicon-search"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="editButtons" class="pull-right" ng-show="edit">
+                                <input type="button" class="btn btn-primary" id="editRowBtn" value="Edit" title="Edit row" />
+                                <input type="button" class="btn btn-danger" ng-click="cancelEdit()" title="Cancel Edit" value="Cancel" />
+                            </div>
+                            <div id="addButtons" class="pull-right" ng-show="add">
+                                <input type="button" class="btn btn-primary" id="addRow" title="Add Row" value="Add" />
+                                <input type="button" class="btn btn-danger" ng-click="add=false;" title="Cancel Add" value="Cancel" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="user_data">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Select
+                            </th>
+                            <th>Sl_No</th>
+                            <th>Created_Date</th>
+                            <th>Case_No</th>
+                            <th>Title</th>
+                            <th>Locations</th>
+                            <th>Attack</th>
+                            <th>Priority</th>
+                            <th>Engineer</th>
+                            <th>Pending</th>
+                            <th>Statuses</th>
+                            <th>Closed</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-show="add">
+                            <form id="createForm">
+                                <td>
+                                    <input type="checkbox" checked disabled />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="si_no" name="siNo" id="siNo" class="number">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="created_date" disabled="disabled" ng-model="createdDate">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="case_no" name="caseNo" id="caseNo">
+                                </td>
+                                <td>
+                                    <textarea placeholder="title" name="title" id="title"></textarea>
+                                </td>
+                                <td>
+                                    <select name="locations" id="locations">
+                                        <option ng-repeat="location in locations">{{location.location_name}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="attack" name="attack" id="attack">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="priority" name="priority" id="priority">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="engineer" name="engineer" id="engineer">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="pending" name="pending" id="pending">
+                                </td>
+                                <td>
+                                    <select name="statuses" id="statuses">
+                                        <option ng-repeat="status in statuses">{{status.status_name}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="closed" name="closed" id="closed">
+                                </td>
+                                <td style="position:relative;">
+                                    <input type="text" placeholder="comments" name="comments" id="comments">
+                                </td>
+                            </form>
+                        </tr>
+                        <tr ng-repeat="columns in filteredBars = (getdata | filter:search)">
+                            <td><input type="checkbox" name="a" class="select" /></td>
+                            <td ng-repeat="(key, value) in columns">
+                                <span ng-bind-html="format(value)"></span>
+                            </td>
+                        </tr>
+                        <tr ng-show="edit" id="editRow">
+                            <form id="editForm">
+                                <td>
+                                    <input type="checkbox" disabled />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="si_no" name="siNo" readonly id="siNoe" class="number">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="created_date" disabled="disabled" name="createdDate">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="case_no" name="caseNo" id="caseNoe">
+                                </td>
+                                <td>
+                                    <textarea placeholder="title" name="title" id="titlee"></textarea>
+                                </td>
+                                <td>
+                                    <select name="locations" id="locationse">
+                                        <option ng-repeat="location in locations">{{location.location_name}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="attack" name="attack" id="attacke">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="priority" name="priority" id="prioritye">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="engineer" name="engineer" id="engineere">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="pending" name="pending" id="pendinge">
+                                </td>
+                                <td>
+                                    <select name="statuses" id="statusese">
+                                        <option ng-repeat="status in statuses">{{status.status_name}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="closed" name="closed" id="closede">
+                                </td>
+                                <td style="position:relative;">
+                                    <input type="text" placeholder="comments" name="comments" id="commentse">
+                                </td>
+                            </form>
+                        </tr>
+                    </tbody>
+                </table>
+            <div ng-show="!filteredBars.length && search.length > 0" class="alert alert-warning"> No items found matching <strong>{{search}}</strong></div>
+            <div ng-show="!getdata.length && search.length == 0" class="alert alert-warning">No items available</div>
+            </div>
+    </div>
+    <div id="login">
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                </div>
+                <div style="padding-top:30px" class="panel-body">
+                    <div id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <form id="loginform" class="form-horizontal" role="form">
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="text" class="form-control" name="username" autofocus placeholder="username">
+                        </div>
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                        </div>
+                        <div style="margin-top:10px" class="form-group">
+                            <!-- Button -->
+                            <div class="col-sm-12 controls">
+                                <input type="submit" id="btn-login" class="btn btn-success" value="Login">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="preloader"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.js"></script>
+    <script src="js/script.js"></script>
+    <script id="dataScript">
+        var db = <?php echo json_encode($db); ?>;
+        var active = <?php echo json_encode($active); ?>;
+        var statuses = <?php echo json_encode($statuses); ?>;
+        var locations = <?php echo json_encode($locations); ?>;
+    </script>
+</body>
+
+</html>
