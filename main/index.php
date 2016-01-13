@@ -206,7 +206,7 @@ $f3->route('GET /vpnData',function($f3){
 		}else{
 			$response['noresult'][] = [$vpn[$i]->i_paddress,sprintf('%u', ip2long($vpn[$i]->i_paddress))];            
 		}
-		if(count($response['data']) > 10){
+		if(count($response['data']) > 100){
 			$response['status'] = 200;
 			break;
 		}
@@ -234,15 +234,15 @@ $f3->route('GET /publicData',function($f3){
 		"noresult" => []
 	];
 	for($i = 0 ; $i < count($public) ; $i++){
-		$query = "SELECT * FROM `ip2location` WHERE " . sprintf('%u', $public[$i]->source_address) . " <= ip_to and " . sprintf('%u', $public[$i]->source_address) . " >= ip_from";
+		$query = "SELECT * FROM `ip2location` WHERE " . $public[$i]->source_address . " <= ip_to and " . $public[$i]->source_address . " >= ip_from";
 		$result = $db1->exec($query);
 		if(count($result) > 0){
-			$result[0]['i_paddress'] = long2ip($black[$i]->source_address);
+			$result[0]['i_paddress'] = long2ip($public[$i]->source_address);
 			$response['data'][] = arrayMerge($result[0],$public[$i]->cast());
 		}else{
-			$response['noresult'][] = [$public[$i]->source_address,sprintf('%u', $public[$i]->source_address)];            
+			$response['noresult'][] = [$public[$i]->source_address];            
 		}
-		if(count($response['data']) > 10){
+		if(count($response['data']) > 100){
 			$response['status'] = 200;
 			break;
 		}
@@ -270,13 +270,13 @@ $f3->route('GET /blackListedData',function($f3){
 		"noresult" => []
 	];
 	for($i = 0 ; $i < count($black) ; $i++){
-		$query = "SELECT * FROM `ip2location` WHERE " . sprintf('%u', ip2long($black[$i]->malicious_i_p)) . " <= ip_to and " . sprintf('%u', ip2long($black[$i]->malicious_i_p)) . " >= ip_from";
+		$query = "SELECT * FROM `ip2location` WHERE " . $black[$i]->malicious_i_p . " <= ip_to and " . $black[$i]->malicious_i_p . " >= ip_from";
 		$result = $db1->exec($query);
 		if(count($result) > 0){
 			$result[0]['i_paddress'] = long2ip($black[$i]->malicious_i_p);
 			$response['data'][] = arrayMerge($result[0],$black[$i]->cast());
 		}else{
-			$response['noresult'][] = [$black[$i]->malicious_i_p,sprintf('%u', $black[$i]->malicious_i_p)];            
+			$response['noresult'][] = [$black[$i]->malicious_i_p];            
 		}
 		if(count($response['data']) > 100){
 			$response['status'] = 200;
@@ -284,6 +284,13 @@ $f3->route('GET /blackListedData',function($f3){
 		}
 	}
 	echo json_encode($response);
+});
+
+
+$f3->route('GET /ip',function($f3){
+	var_dump(long2ip($_GET['ip']));
+	$db = getMainDB1();
+	var_dump($db->exec("select INET_NTOA(malicious_i_p) from arc_ald_n783qv limit 10"));
 });
 
 //var_dump(exec('c:\wamp\bin\mysql\mysql5.6.17\bin\mysqldump --user=root --password= --host=localhost vatsav > ./11111111111.sql') );

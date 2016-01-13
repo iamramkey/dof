@@ -58,9 +58,12 @@ function getContent(markerData) {
 	}
 	if(markerData.city_name){
 		string += '<div class="infoDetail"><span>City :</span><span>' + markerData.city_name + '</span></div>';
-	}
-	if(markerData.creation_time){
+	}/*
+	if(new Date(markerData.creation_time)){
 		string += '<div class="infoDetail"><span>Creation Time :</span><span>' + new Date(markerData.creation_time).toLocaleDateString() + '</span></div>';
+	}*/
+	if(new Date(markerData.last_modified_time)){
+		string += '<div class="infoDetail"><span>Last Modified Time :</span><span>' + new Date(markerData.last_modified_time).toLocaleDateString() + '</span></div>';
 	}
 	if(markerData.count){
 		string += '<div class="infoDetail"><span>Attack Count :</span><span>' + markerData.count + '</span></div>';
@@ -83,7 +86,7 @@ var prevMarker;
 function createMarker(markerData, a, i, m) {
 	m = new google.maps.Marker({
 		position: markerData.latLng,
-		title: markerData.city + ', ' + markerData.country,
+		title: markerData.city_name + ', ' + markerData.country_name,
 		animation: a || google.maps.Animation.DROP,
 		map: map,
 		htmlContent: getContent(markerData),
@@ -149,8 +152,10 @@ function showData(locations) {
 			each.latLng = new google.maps.LatLng(each.latitude, each.longitude);
 			each.marker = createMarker(each, google.maps.Animation.DROP,each.icon);
 			markersList.push(each.marker);
-			each.line = createLine(dofData, each);
-			animateCircle(each.line);
+			if(currentScreen != 'BlackListed'){
+				each.line = createLine(dofData, each);
+				animateCircle(each.line);	
+			}
 			delete each.new;
 		}
 	}
@@ -190,7 +195,7 @@ function vpnAjaxCB(data){
 					positions[data.data[i].latitude] != data.data[i].longitude) {
 					positions[data.data[i].latitude] = data.data[i].longitude;
 					data.data[i].new = true;
-					data.data[i].icon = (data.data[i].status == 'fail' ? 'assets/red1.png' : 'assets/blue.png');
+					data.data[i].icon = (data.data[i].status == 'fail' ? 'assets/red1.png' : 'assets/green1.png');
 					vpnData.push(data.data[i]);
 					/*vpnData.push({
 						userName: data.data[i].user_name,
@@ -252,7 +257,7 @@ function blackAjaxCB(data){
 					positions[data.data[i].latitude] != data.data[i].longitude) {
 					positions[data.data[i].latitude] = data.data[i].longitude;
 					data.data[i].new = true;
-					data.data[i].icon = 'assets/blue.png';
+					data.data[i].icon = 'assets/red1.png';
 					blackData.push(data.data[i]);
 					/*blackData.push({
 						userName: data.data[i].user_name,
@@ -306,7 +311,9 @@ function changeView() {
 		var data = (currentScreen == 'PublicIP' ? publicData : currentScreen == 'VPN' ? vpnData : blackData);
 		for (var i = 0; each = data[i]; i++) {
 			each.marker.setMap(null);
-			each.line.setMap(null);
+			if(currentScreen != 'BlackListed'){
+				each.line.setMap(null);
+			}
 		}
 		currentScreen = this.id == 'public' ? 'PublicIP' : this.id == 'blacklist' ? 'BlackListed' : 'VPN';
 		clearInterval(t);
