@@ -174,24 +174,12 @@ $f3->route('GET /vpnData',function($f3){
 	*/
 	$vpnTableName = 'arc_ald_jk7vd8';
 	ob_clean();
-	$db = getMainDB1();
+	$db = getMainDB();
 	$db1 = getDB();
-	/*$data = simplexml_load_file("XMLFiles/VPN_Bulk.xml");
-    for($i = 0; $i < count( $data->WorldMap );$i++){
-        $time = strtotime( DateTime::createFromFormat('d/m/Y', $data->WorldMap[$i]->creationTime)->format('Y-m-d') );
-        if($time){
-            $vpn->user_name = $data->WorldMap[$i]->UserName;
-            $vpn->i_paddress = $data->WorldMap[$i]->ipAddess;
-            $vpn->status = strcasecmp($data->WorldMap[$i]->listStatus,'success') ? 'succ' : 'fail';
-            $vpn->creation_time = date('Y-m-d H:i:s.u',$time);
-            $vpn->last_modified_time = date('Y-m-d H:i:s.u',$time);
-            $vpn->count = $data->WorldMap[$i]->attackCount;
-            $vpn->save();            
-            ob_flush();  
-        }        
-    }*/
 	$vpns = new DB\SQL\Mapper($db,$vpnTableName);
-	$vpn = $vpns->find();
+	$vpn = $vpns->find([],array(
+		'limit' => 100
+	));
 	$response = [
 		"status" => 200,
 		"message" => "",
@@ -206,10 +194,6 @@ $f3->route('GET /vpnData',function($f3){
 		}else{
 			$response['noresult'][] = [$vpn[$i]->i_paddress,sprintf('%u', ip2long($vpn[$i]->i_paddress))];            
 		}
-		if(count($response['data']) > 100){
-			$response['status'] = 200;
-			break;
-		}
 	}
 	echo json_encode($response);
 });
@@ -223,10 +207,12 @@ $f3->route('GET /publicData',function($f3){
 	*/
 	$publicTableName = 'arc_ald_6idppj';
 	ob_clean();
-	$db = getMainDB1();
+	$db = getMainDB();
 	$db1 = getDB();
 	$publics = new DB\SQL\Mapper($db,$publicTableName);
-	$public = $publics->find();
+	$public = $publics->find([],array(
+		'limit' => 100
+	));
 	$response = [
 		"status" => 200,
 		"message" => "",
@@ -242,10 +228,6 @@ $f3->route('GET /publicData',function($f3){
 		}else{
 			$response['noresult'][] = [$public[$i]->source_address];            
 		}
-		if(count($response['data']) > 100){
-			$response['status'] = 200;
-			break;
-		}
 	}
 	echo json_encode($response);
 });
@@ -259,10 +241,12 @@ $f3->route('GET /blackListedData',function($f3){
 	*/
 	$blackListedTableName = 'arc_ald_n783qv';
 	ob_clean();
-	$db = getMainDB1();
+	$db = getMainDB();
 	$db1 = getDB();
 	$blacks = new DB\SQL\Mapper($db,$blackListedTableName);
-	$black = $blacks->find();
+	$black = $blacks->find([],array(
+		'limit' => 100
+	));
 	$response = [
 		"status" => 200,
 		"message" => "",
@@ -278,9 +262,70 @@ $f3->route('GET /blackListedData',function($f3){
 		}else{
 			$response['noresult'][] = [$black[$i]->malicious_i_p];            
 		}
-		if(count($response['data']) > 100){
-			$response['status'] = 200;
-			break;
+	}
+	echo json_encode($response);
+});
+$f3->route('GET /allData',function($f3){
+	set_time_limit(0);
+	ini_set("memory_limit",-1);
+	ini_set('mysql.connect_timeout', 1800);
+	ini_set('default_socket_timeout', 1800);
+	/*
+	this is the black listed ip table name
+	*/
+	$blackListedTableName = 'arc_ald_n783qv';
+	ob_clean();
+	$db = getMainDB();
+	$db1 = getDB();
+	$response = [
+		"status" => 200,
+		"message" => "",
+		"publicData" => [],
+		"blackData" => [],
+		"vpnData" => []
+	];
+	$blacks = new DB\SQL\Mapper($db,$blackListedTableName);
+	$black = $blacks->find([],array(
+		'limit' => 200
+	));
+	for($i = 0 ; $i < count($black) ; $i++){
+		$query = "SELECT * FROM `ip2location` WHERE " . $black[$i]->malicious_i_p . " <= ip_to and " . $black[$i]->malicious_i_p . " >= ip_from";
+		$result = $db1->exec($query);
+		if(count($result) > 0){
+			$result[0]['i_paddress'] = long2ip($black[$i]->malicious_i_p);
+			$response['blackData'][] = arrayMerge($result[0],$black[$i]->cast());
+		}
+	}
+	/*
+	this is the public ip table name
+	*/
+	$publicTableName = 'arc_ald_6idppj';
+	$publics = new DB\SQL\Mapper($db,$publicTableName);
+	$public = $publics->find([],array(
+		'limit' => 100
+	));
+	for($i = 0 ; $i < count($public) ; $i++){
+		$query = "SELECT * FROM `ip2location` WHERE " . $public[$i]->source_address . " <= ip_to and " . $public[$i]->source_address . " >= ip_from";
+		$result = $db1->exec($query);
+		if(count($result) > 0){
+			$result[0]['i_paddress'] = long2ip($public[$i]->source_address);
+			$response['publicData'][] = arrayMerge($result[0],$public[$i]->cast());
+		}
+	}
+
+	/*
+	this is the vpn table name
+	*/
+	$vpnTableName = 'arc_ald_jk7vd8';
+	$vpns = new DB\SQL\Mapper($db,$vpnTableName);
+	$vpn = $vpns->find([],array(
+		'limit' => 100
+	));
+	for($i = 0 ; $i < count($vpn) ; $i++){
+		$query = "SELECT * FROM `ip2location` WHERE " . sprintf('%u', ip2long($vpn[$i]->i_paddress)) . " <= ip_to and " . sprintf('%u', ip2long($vpn[$i]->i_paddress)) . " >= ip_from";
+		$result = $db1->exec($query);
+		if(count($result) > 0){
+			$response['vpnData'][] = arrayMerge($result[0],$vpn[$i]->cast());
 		}
 	}
 	echo json_encode($response);
@@ -289,10 +334,16 @@ $f3->route('GET /blackListedData',function($f3){
 
 $f3->route('GET /ip',function($f3){
 	var_dump(long2ip($_GET['ip']));
-	$db = getMainDB1();
+	$db = getMainDB();
 	var_dump($db->exec("select INET_NTOA(malicious_i_p) from arc_ald_n783qv limit 10"));
 });
 
 //var_dump(exec('c:\wamp\bin\mysql\mysql5.6.17\bin\mysqldump --user=root --password= --host=localhost vatsav > ./11111111111.sql') );
 
 $f3->run();
+
+//public ippen avatledu
+//blacklisted ip open avataledu
+//different colors for markers
+//table lo 3 buttons
+//google visualization view total load cheyyali

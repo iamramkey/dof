@@ -1,19 +1,19 @@
 /* rss apply height to form automatically */
+body{
+	overflow-x: hidden;
+}
 #rootTable {
 	width: 127px;
 	float: left;
 }
-
 #ctl00_Menu1 {
 	float: none;
 }
-
 #aspnetForm {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-
 .CPlacHolder {
 	/*
 	position: relative;
@@ -35,11 +35,9 @@
 	  left:10.5%;
 	  */
 }
-
 body {
 	margin: 0;
 }
-
 #mapCanvas {
 	position: absolute;
 	left: 0;
@@ -47,7 +45,17 @@ body {
 	bottom: 0;
 	top: 60px;
 }
-
+#mapCanvas1 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	top: 60px;
+	padding: 10px 0;
+	z-index: 111;
+	overflow: hidden;
+	background-color: #fff;
+}
 .infoTitle {
 	font-size: 18px;
 	margin: 0;
@@ -56,19 +64,16 @@ body {
 	color: #333;
 	font-family: Helvetica, sans-serif;
 }
-
 .infoDetail {
 	font-size: 12px;
 	line-height: 20px;
 	color: #666;
 	font-family: Helvetica, sans-serif;
 }
-
 .infoDetail span:first-child {
 	font-weight: bold;
 	width: 150px;
 }
-
 #loader {
 	position: fixed;
 	top: 0;
@@ -81,12 +86,10 @@ body {
 	background-position: center center;
 	background-color: white;
 }
-
 .center {
 	width: 90%;
 	margin: auto;
 }
-
 #header {
 	background-color: rgba(255, 255, 255, .2);
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
@@ -96,11 +99,9 @@ body {
 	z-index: 1000;
 	font-family: Helvetica, sans-serif;
 }
-
 #header .center {
 	position: relative;
 }
-
 #headerText {
 	line-height: 60px;
 	font-size: 1.5em;
@@ -109,13 +110,11 @@ body {
 	text-shadow: 1px 1px 1px #fff;
 	font-weight: bold;
 }
-
 #screen {
 	position: absolute;
 	top: 14px;
 	right: 0;
 }
-
 .button {
 	display: inline-block;
 	padding: 0 20px;
@@ -130,22 +129,189 @@ body {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
-
-.button:hover, .button.active {
+.button:hover,
+.button.active {
 	background: #4096ee;
 }
 
 /* iPad Portrait */
+
 @media only screen and (max-width: 768px) {
 	#headerText {
 		text-align: left;
 		font-size: 1em;
 	}
-
-	.button{
+	.button {
 		font-size: .7em;
 		line-height: 30px;
 		margin-left: 5px;
 		padding: 0 10px;
 	}
+}
+#dataTable {
+	position: absolute;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 0;
+	height: 19%;
+	overflow: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	background-color: #f0f0f0;
+	font-family: Helvetica, sans-serif;
+	border: 1px solid rgba(0,0,0,.1);
+}
+.datatable {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border: 1px solid #c0c0c0;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+.datatable table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.datatable tr:last-child td:last-child {
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.datatable table tr:first-child td:first-child {
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+.datatable table tr:first-child td:last-child {
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.datatable tr:last-child td:first-child {
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.datatable tr:hover td {}
+.datatable tbody tr:nth-child(even) {
+	background-color: #FFD4AD;
+}
+.datatable tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+.datatable td {
+	vertical-align: middle;
+	border: 1px solid #c0c0c0;
+	border-width: 0px 1px 1px 0px;
+	text-align: left;
+	padding: 7px;
+	font-size: 11px;
+	font-family: Helvetica, sans-serif;
+	color: #333;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+.datatable tr:last-child td {
+	border-width: 0px 1px 0px 0px;
+}
+.datatable tr td:last-child {
+	border-width: 0px 0px 1px 0px;
+}
+.datatable tr:last-child td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+.datatable thead tr:first-child td {
+	background: -o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00));
+	background: -moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");
+	background: -o-linear-gradient(top, #ff7f00, bf5f00);
+	background-color: #ff7f00;
+	border: 0px solid #c0c0c0;
+	text-align: center;
+	border-width: 0px 0px 1px 1px;
+	font-size: 13px;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	color: #ffffff;
+}/*
+.datatable tr:first-child:hover td {
+	background: -o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00));
+	background: -moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");
+	background: -o-linear-gradient(top, #ff7f00, bf5f00);
+	background-color: #ff7f00;
+}*/
+.datatable thead tr:first-child td:first-child {
+	border-width: 0px 0px 1px 0px;
+}
+.datatable thead tr:first-child td:last-child {
+	border-width: 0px 0px 1px 1px;
+}
+.tabs{
+	width: 100%;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	z-index: 1;
+}
+.tabs li{
+	width: 33.3333333333333333333%;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	font-weight: normal;
+	color: #333;
+	border-left: 1px solid #ccc;
+	margin-left: -1px;
+	border-bottom: 1px solid #c0c0c0;
+	background-color: #e0e0e0;
+	cursor: pointer;
+}
+.tabs li:first-child{
+	border-left: none;
+	margin-left: 0;
+}
+.tabs li:hover{
+	background-color: #fff;
+}
+.tabs li.active{
+	background-color: #fff;
+	font-weight: bold;
+}
+#tableContainer{
+	position: absolute;
+	top: 30px;
+	bottom: 0;
+	overflow: auto;
+	padding: 1%;
+	width: 98%;
+	background-color: #fff;
+}
+#googleChartDiv{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 81%;
+	padding: 10px 0;
 }

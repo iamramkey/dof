@@ -2,16 +2,17 @@ var publicData = [],
 	vpnData = [],
 	blackData = [],
 	dofData = {
-		attackCount: "0",
-		city: "ABU DHABI",
-		country: "UNITED ARAB EMIRATES",
-		creationTime: "2015-02-02 9:17:00 AM",
+		count: "0",
+		city_name: "ABU DHABI",
+		country_name: "UNITED ARAB EMIRATES",
+		creation_time: "2015-02-02 9:17:00 AM",
+		last_modified_time: "2015-02-02 9:17:00 AM",
 		destinationPort: "HQ",
-		ipAddress: "DOF",
+		i_paddress: "DOF",
 		ipAddressTarget: "DOF",
 		latitude: "24.492689",
 		longitude: "54.359386",
-		userName: "Check"
+		user_name: "Check"
 	},
 	positions = {},
 	currentScreen = 'PublicIP',
@@ -146,7 +147,7 @@ function showData(locations) {
 	if(t){
 		clearInterval(t);	
 	}
-	t = setInterval(loadData, 50000);
+	//t = setInterval(loadData, 50000);
 	for (var i = 0, each; each = locations[i]; i++) {
 		if (each.new) {
 			each.latLng = new google.maps.LatLng(each.latitude, each.longitude);
@@ -257,7 +258,7 @@ function blackAjaxCB(data){
 					positions[data.data[i].latitude] != data.data[i].longitude) {
 					positions[data.data[i].latitude] = data.data[i].longitude;
 					data.data[i].new = true;
-					data.data[i].icon = 'assets/red1.png';
+					data.data[i].icon = 'assets/pink.png';
 					blackData.push(data.data[i]);
 					/*blackData.push({
 						userName: data.data[i].user_name,
@@ -324,6 +325,24 @@ function changeView() {
 		this.className = 'button active';
 	}
 }
+function switchViews(){
+	if($(this).data('show') == 'maps'){
+		if(!initCalled){
+			initCalled = true;
+			init();
+		}
+		$('#mapCanvas1').css('left','100%');
+		$('#mapCanvas').css('left','0');
+		$('#googleMaps').data('show','charts').text('Google Charts');
+		$('#vpn,#public,#blacklist').show();
+	}else{
+		$('#mapCanvas1').css('left','0%');
+		$('#mapCanvas').css('left','100%');
+		$('#googleMaps').data('show','maps').text('Google Maps');
+		$('#vpn,#public,#blacklist').hide();
+	}
+}
+var initCalled = false;
 function init() {
 	dofData.latLng = new google.maps.LatLng(dofData.latitude, dofData.longitude);
 	mapOptions = {
@@ -364,12 +383,195 @@ function init() {
 	document.getElementById('vpn').addEventListener('click', changeView);
 	document.getElementById('public').addEventListener('click', changeView);
 	document.getElementById('blacklist').addEventListener('click', changeView);
+	$('#vpn,#public,#blacklist').hide();
 }
+
+var allData = {};
+function generateTableHeaders(markerData){
+	$('.datatable thead').html('');
+	var tr = $('<tr></tr>');
+	if(markerData.i_paddress){
+		tr.append('<td>IP Address</td>');
+	}
+	if(markerData.user_name){
+		tr.append('<td>User Name</td>');
+	}
+	if(markerData.country_name){
+		tr.append('<td>Country</td>');
+	}
+	if(markerData.city_name){
+		tr.append('<td>City</td>');
+	}
+	if(new Date(markerData.last_modified_time)){
+		tr.append('<td>Last Modified Time</td>');
+	}
+	if(markerData.count){
+		tr.append('<td>Attack Count</td>');
+	}
+	if(markerData.latitude){
+		tr.append('<td>Latitude</td>');
+	}
+	if(markerData.longitude){
+		tr.append('<td>Longitude</td>');
+	}
+	if(markerData.malicious_domain){
+		tr.append('<td>Malicious Domain</td>');
+	}
+	if(markerData.message){
+		tr.append('<td>Message</td>');
+	}
+	$('.datatable thead').append(tr);
+}
+function fillTable(){
+	var tableData = [];
+	switch($('.tabs li.active').text().trim().toLowerCase()){
+		case 'public':
+			tableData = allData.publicData;
+			break;
+		case 'blacklisted':
+			tableData = allData.blackData;
+			break;
+		case 'vpn':
+			tableData = allData.vpnData;
+			break;
+	}
+	if(tableData.length > 0){
+		$('.datatable tbody').html('');
+		generateTableHeaders(tableData[0]);
+		for(var i = 0,markerData; markerData = tableData[i] ; i++){
+			var tr = $('<tr></tr>');
+			if(markerData.i_paddress){
+				tr.append('<td>' + markerData.i_paddress + '</td>');
+			}
+			if(markerData.user_name){
+				tr.append('<td>' + markerData.user_name + '</td>');
+			}
+			if(markerData.country_name){
+				tr.append('<td>' + markerData.country_name + '</td>');
+			}
+			if(markerData.city_name){
+				tr.append('<td>' + markerData.city_name + '</td>');
+			}
+			if(new Date(markerData.last_modified_time)){
+				tr.append('<td>' + new Date(markerData.last_modified_time).toLocaleDateString() + '</td>');
+			}
+			if(markerData.count){
+				tr.append('<td>' + markerData.count + '</td>');
+			}
+			if(markerData.latitude){
+				tr.append('<td>' + markerData.latitude + '</td>');
+			}
+			if(markerData.longitude){
+				tr.append('<td>' + markerData.longitude + '</td>');
+			}
+			if(markerData.malicious_domain){
+				tr.append('<td>' + markerData.malicious_domain + '</td>');
+			}
+			if(markerData.message){
+				tr.append('<td>' + markerData.message + '</td>');
+			}
+			$('.datatable tbody').append(tr);
+		}
+	}else{
+		$('.datatable tbody').append('No data available');
+	}
+}
+function getTooltip(markerData){
+	var string = '';
+	if(markerData.i_paddress){
+		string += 'IP Address :' + markerData.i_paddress + '\n';
+	}
+	if(markerData.user_name){
+		string += 'User Name :' + markerData.user_name + '\n';
+	}
+	if(markerData.country_name){
+		string += 'Country :' + markerData.country_name + '\n';
+	}
+	if(markerData.city_name){
+		string += 'City :' + markerData.city_name + '\n';
+	}
+	if(new Date(markerData.last_modified_time)){
+		string += 'Last Modified Time :' + new Date(markerData.last_modified_time).toLocaleDateString() + '\n';
+	}
+	if(markerData.count){
+		string += 'Attack Count :' + markerData.count + '\n';
+	}
+	if(markerData.latitude){
+		string += 'Latitude :' + markerData.latitude + '\n';
+	}
+	if(markerData.longitude){
+		string += 'Longitude :' + markerData.longitude + '\n';
+	}
+	if(markerData.malicious_domain){
+		string += 'Malicious Domain :' + markerData.malicious_domain + '\n';
+	}
+	if(markerData.message){
+		string += 'Message :' + markerData.message + '\n';
+	}
+	return string;
+}
+function drawRegionsMap() {
+	$.ajax({
+		url : 'allData',
+		dataType : 'json',
+		success:function(data){
+			allData = data;			
+			var chartData = [
+			];
+			var geoChartData = new google.visualization.DataTable();
+			geoChartData.addColumn('number', 'Latitude');
+			geoChartData.addColumn('number', 'Longitude');
+			geoChartData.addColumn('string', 'Name');
+			geoChartData.addColumn('number', 'Value');
+			geoChartData.addColumn({type:'string', role:'tooltip'});
+			for(var i =0,each;each = allData.publicData[i] ; i++){
+				chartData.push([Number(each.latitude),Number(each.longitude),"Public IP",each.count,getTooltip(each) ]);
+			}
+			for(var i =0,each;each = allData.blackData[i] ; i++){
+				chartData.push([Number(each.latitude),Number(each.longitude),"Blacklisted IP",each.count,getTooltip(each) ]);
+			}
+			for(var i =0,each;each = allData.vpnData[i] ; i++){
+				chartData.push([Number(each.latitude),Number(each.longitude),"VPN",each.count,getTooltip(each) ]);
+			}
+			geoChartData.addRows(chartData);
+			var options = {
+				displayMode: 'markers',
+				colorAxis:{
+					colors:['#4096EE','#F97A01']
+				}
+			};
+			var chart = new google.visualization.GeoChart(document.getElementById('googleChartDiv'));
+			chart.draw(geoChartData, options);
+			document.getElementById('loader').style.display = 'none';
+			fillTable();	
+		},
+		error:function(){
+			
+		}
+	});
+}
+
+function showTabs(){
+	if(!$(this).hasClass('active')){
+		$('.tabs li.active').removeClass('active');
+		$(this).addClass('active');
+		fillTable();
+	}
+}
+
+function loadGoogleCharts(){
+	google.charts.load('current', {'packages':['geochart']});
+	google.charts.setOnLoadCallback(drawRegionsMap);
+	$('#vpn,#public,#blacklist').hide();
+	document.getElementById('googleMaps').addEventListener('click', switchViews);
+	$('.tabs li').on('click',showTabs);
+}
+
 function onLoad() {
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
 	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-		'&signed_in=false&callback=init';
+		'&signed_in=false&callback=loadGoogleCharts';
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
 window.addEventListener('load', onLoad);
