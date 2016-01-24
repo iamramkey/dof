@@ -147,7 +147,7 @@ function showData(locations) {
 	if(t){
 		clearInterval(t);	
 	}
-	//t = setInterval(loadData, 50000);
+	t = setInterval(loadData, 50000);
 	for (var i = 0, each; each = locations[i]; i++) {
 		if (each.new) {
 			each.latLng = new google.maps.LatLng(each.latitude, each.longitude);
@@ -331,6 +331,23 @@ function switchViews(){
 			initCalled = true;
 			init();
 		}
+		for (var i = 0; each = publicData[i]; i++) {
+			each.marker.setMap(null);
+			each.line.setMap(null);
+		}
+		for (var i = 0; each = vpnData[i]; i++) {
+			each.marker.setMap(null);
+			each.line.setMap(null);
+		}
+		for (var i = 0; each = blackData[i]; i++) {
+			each.marker.setMap(null);
+		}
+		currentScreen = 'PublicIP';
+		clearInterval(t);
+		positions = {};
+		publicData.length = vpnData.length = blackData.length = 0;
+		$('.button.active').removeClass('active');
+		$('#public').addClass('active');
 		$('#mapCanvas1').css('left','100%');
 		$('#mapCanvas').css('left','0');
 		$('#googleMaps').data('show','charts').text('Google Charts');
@@ -340,10 +357,18 @@ function switchViews(){
 		$('#mapCanvas').css('left','100%');
 		$('#googleMaps').data('show','maps').text('Google Maps');
 		$('#vpn,#public,#blacklist').hide();
+		document.getElementById('loader').style.display = 'block';
+		drawRegionsMap();
+		if(t){
+			clearInterval(t);	
+		}
 	}
 }
 var initCalled = false;
 function init() {
+	publicData = [],
+	vpnData = [],
+	blackData = [];
 	dofData.latLng = new google.maps.LatLng(dofData.latitude, dofData.longitude);
 	mapOptions = {
 		zoom: 8,
@@ -383,7 +408,6 @@ function init() {
 	document.getElementById('vpn').addEventListener('click', changeView);
 	document.getElementById('public').addEventListener('click', changeView);
 	document.getElementById('blacklist').addEventListener('click', changeView);
-	$('#vpn,#public,#blacklist').hide();
 }
 
 var allData = {};
@@ -426,13 +450,13 @@ function fillTable(){
 	var tableData = [];
 	switch($('.tabs li.active').text().trim().toLowerCase()){
 		case 'public':
-			tableData = allData.publicData;
+			tableData = publicData;
 			break;
 		case 'blacklisted':
-			tableData = allData.blackData;
+			tableData = blackData;
 			break;
 		case 'vpn':
-			tableData = allData.vpnData;
+			tableData = vpnData;
 			break;
 	}
 	if(tableData.length > 0){
@@ -515,7 +539,10 @@ function drawRegionsMap() {
 		url : 'allData',
 		dataType : 'json',
 		success:function(data){
-			allData = data;			
+			allData = data;
+			publicData = allData.publicData;
+			vpnData = allData.vpnData;
+			blackData = allData.blackData;
 			var chartData = [
 			];
 			var geoChartData = new google.visualization.DataTable();
@@ -525,13 +552,13 @@ function drawRegionsMap() {
 			geoChartData.addColumn('number', 'Value');
 			geoChartData.addColumn({type:'string', role:'tooltip'});
 			for(var i =0,each;each = allData.publicData[i] ; i++){
-				chartData.push([Number(each.latitude),Number(each.longitude),"Public IP",each.count,getTooltip(each) ]);
+				chartData.push([Number(each.latitude),Number(each.longitude),"Public IP",Number(each.count),getTooltip(each) ]);
 			}
 			for(var i =0,each;each = allData.blackData[i] ; i++){
-				chartData.push([Number(each.latitude),Number(each.longitude),"Blacklisted IP",each.count,getTooltip(each) ]);
+				chartData.push([Number(each.latitude),Number(each.longitude),"Blacklisted IP",Number(each.count),getTooltip(each) ]);
 			}
 			for(var i =0,each;each = allData.vpnData[i] ; i++){
-				chartData.push([Number(each.latitude),Number(each.longitude),"VPN",each.count,getTooltip(each) ]);
+				chartData.push([Number(each.latitude),Number(each.longitude),"VPN",Number(each.count),getTooltip(each) ]);
 			}
 			geoChartData.addRows(chartData);
 			var options = {
