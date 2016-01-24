@@ -5,13 +5,13 @@ $f3 = require('lib/base.php');
 
 $f3->set('DEBUG', 1);
 if ((float)PCRE_VERSION < 7.9)
-    trigger_error('PCRE version is out of date');
+	trigger_error('PCRE version is out of date');
 set_time_limit(0);
 // Load configuration
 $f3->config('config.ini');
 
 function clean($f3, $value){
-    return $f3->clean($f3->get($value));
+	return $f3->clean($f3->get($value));
 }
 
 
@@ -40,76 +40,76 @@ function arrayMerge($a, $b, $unique = false) {
 }
 
 $f3->route('GET /',function($f3){
-    if(isset($_SESSION['user'])){
-        $f3->reroute('/overview');
-    }else{
-        $f3->reroute('/login');  
-    }
+	if(isset($_SESSION['user'])){
+		$f3->reroute('/overview');
+	}else{
+		$f3->reroute('/login');  
+	}
 });
 
 $f3->route('POST /login',function($f3){
-    $username = clean($f3,'POST.username');
-    $password = clean($f3,'POST.password');
-    $response = [];
-    if(empty($username) || empty($password)){
-        $response['error'] = 'Empty user credentials';
-        $response['status'] = 412;
-        echo json_encode($response);
-        return;
-    }
-    if($username == 'admin' && $password == 'admin'){
-        $response['success'] = 'Successfully logged in';
-        $response['status'] = 200;
-        $_SESSION['user'] = 'admin';
-        echo json_encode($response);
-        return;
-    }else{
-        $response['error'] = 'Invalid Credentials';
-        $response['status'] = 401;
-        echo json_encode($response);
-        return;
-    }
+	$username = clean($f3,'POST.username');
+	$password = clean($f3,'POST.password');
+	$response = [];
+	if(empty($username) || empty($password)){
+		$response['error'] = 'Empty user credentials';
+		$response['status'] = 412;
+		echo json_encode($response);
+		return;
+	}
+	if($username == 'admin' && $password == 'admin'){
+		$response['success'] = 'Successfully logged in';
+		$response['status'] = 200;
+		$_SESSION['user'] = 'admin';
+		echo json_encode($response);
+		return;
+	}else{
+		$response['error'] = 'Invalid Credentials';
+		$response['status'] = 401;
+		echo json_encode($response);
+		return;
+	}
 });
 
 $f3->route('POST /logout',function($f3){
-    $response['success'] = 'Successfully logged out';
-    $response['status'] = 200;
-    unset($_SESSION['user']);
-    echo json_encode($response);
-    return;
+	$response['success'] = 'Successfully logged out';
+	$response['status'] = 200;
+	unset($_SESSION['user']);
+	echo json_encode($response);
+	return;
 });
 
 $f3->route('GET /@route',function($f3){
-    $route = $f3->get('PARAMS.route');
-    $view = '';
-    switch($route){
-        case 'overview':
-        case 'overviews':
-        case 'incidentoverview':
-        case 'datacenter':
-        case 'security': 
-        case 'video': 
-        case 'securityawareness':
-        case 'worldmap':
-        case 'custom':
-        case 'calendar':
-        case 'rss':
-            if(isset($_SESSION['user'])){
-                $view = $route . '.html';
-            }else{
-                $f3->reroute('/');
-            }
-            break;
-        case 'login':
-            unset($_SESSION['user']);
-            $view = 'login.html';
-            break;
-        default:
-            $f3->reroute('/');
-            //var_dump($route);
-            break;
-    }
-    echo View::instance()->render($view);
+	$route = $f3->get('PARAMS.route');
+	$view = '';
+	switch($route){
+		case 'overview':
+		case 'overviews':
+		case 'incidentoverview':
+		case 'datacenter':
+		case 'security': 
+		case 'video': 
+		case 'securityawareness':
+		case 'worldmap':
+		case 'custom':
+		case 'calendar':
+		case 'rss':
+			if(isset($_SESSION['user'])){
+				$view = $route . '.html';
+			}else{
+				$f3->reroute('/');
+			}
+			break;
+		case 'login':
+			unset($_SESSION['user']);
+			$view = 'login.html';
+			break;
+		default:
+			$f3->reroute('/');
+			//var_dump($route);
+			break;
+	}
+	echo View::instance()->render($view);
 });
 
 function getMainDB(){
@@ -163,6 +163,35 @@ function getDB(){
 		$password
 	);
 }
+
+$f3->route('GET /vpn',function($f3){
+	$time_start = microtime(true);
+	set_time_limit(0);
+	ini_set("memory_limit",-1);
+	ini_set('mysql.connect_timeout', 300);
+	ini_set('default_socket_timeout', 300);
+	/*
+	this is the vpn table name
+	*/
+	$vpnTableName = 'arc_ald_jk7vd8';
+	ob_clean();
+	$db = getMainDB();
+	$vpn = $db->exec("select * from $vpnTableName,soc_ipct.ip2location where inet_aton(i_paddress) <= ip_to and inet_aton(i_paddress) >= ip_from limit 100");
+	$response = [
+		"status" => 200,
+		"message" => "",
+		"data" => [],
+		"noresult" => []
+	];
+	if(!empty($vpn)){
+		$response['data'] = $vpn;
+	}
+	//echo json_encode($response);
+	$time_end = microtime(true);
+	//dividing with 60 will give the execution time in minutes other wise seconds
+	$execution_time = ($time_end - $time_start);
+	echo '<b>Total Execution Time:</b> '.$execution_time.' Seconds';
+});
 
 $f3->route('GET /vpnData',function($f3){
 	set_time_limit(0);
@@ -329,6 +358,77 @@ $f3->route('GET /allData',function($f3){
 		}
 	}
 	echo json_encode($response);
+});
+$f3->route('GET /time',function($f3){
+	$time_start = microtime(true);
+	set_time_limit(0);
+	ini_set("memory_limit",-1);
+	ini_set('mysql.connect_timeout', 1800);
+	ini_set('default_socket_timeout', 1800);
+	/*
+	this is the black listed ip table name
+	*/
+	$blackListedTableName = 'arc_ald_n783qv';
+	ob_clean();
+	$db = getMainDB();
+	$db1 = getDB();
+	$response = [
+		"status" => 200,
+		"message" => "",
+		"publicData" => [],
+		"blackData" => [],
+		"vpnData" => []
+	];
+	$blacks = new DB\SQL\Mapper($db,$blackListedTableName);
+	$black = $blacks->find([],array(
+		'limit' => 200
+	));
+	for($i = 0 ; $i < count($black) ; $i++){
+		$query = "SELECT * FROM `ip2location` WHERE " . $black[$i]->malicious_i_p . " <= ip_to and " . $black[$i]->malicious_i_p . " >= ip_from";
+		$result = $db1->exec($query);
+		if(count($result) > 0){
+			$result[0]['i_paddress'] = long2ip($black[$i]->malicious_i_p);
+			$response['blackData'][] = arrayMerge($result[0],$black[$i]->cast());
+		}
+	}
+	/*
+	this is the public ip table name
+	*/
+	$publicTableName = 'arc_ald_6idppj';
+	$publics = new DB\SQL\Mapper($db,$publicTableName);
+	$public = $publics->find([],array(
+		'limit' => 100
+	));
+	for($i = 0 ; $i < count($public) ; $i++){
+		$query = "SELECT * FROM `ip2location` WHERE " . $public[$i]->source_address . " <= ip_to and " . $public[$i]->source_address . " >= ip_from";
+		$result = $db1->exec($query);
+		if(count($result) > 0){
+			$result[0]['i_paddress'] = long2ip($public[$i]->source_address);
+			$response['publicData'][] = arrayMerge($result[0],$public[$i]->cast());
+		}
+	}
+
+	/*
+	this is the vpn table name
+	*/
+	$vpnTableName = 'arc_ald_jk7vd8';
+	$vpns = new DB\SQL\Mapper($db,$vpnTableName);
+	$vpn = $vpns->find([],array(
+		'limit' => 100
+	));
+	for($i = 0 ; $i < count($vpn) ; $i++){
+		$query = "SELECT * FROM `ip2location` WHERE " . sprintf('%u', ip2long($vpn[$i]->i_paddress)) . " <= ip_to and " . sprintf('%u', ip2long($vpn[$i]->i_paddress)) . " >= ip_from";
+		$result = $db1->exec($query);
+		if(count($result) > 0){
+			$response['vpnData'][] = arrayMerge($result[0],$vpn[$i]->cast());
+		}
+	}
+
+	$time_end = microtime(true);
+
+	//dividing with 60 will give the execution time in minutes other wise seconds
+	$execution_time = ($time_end - $time_start);
+	echo '<b>Total Execution Time:</b> '.$execution_time.' Seconds';
 });
 
 
