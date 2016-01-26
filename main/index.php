@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+
+$development = false;
+
 // Kickstart the framework
 $f3 = require('lib/base.php');
 
@@ -28,6 +32,19 @@ $publicTableName = 'arc_ald_6idppj';
 	this is the black listed ip table name
 */
 $blackListedTableName = 'arc_ald_n783qv';
+
+/*
+	this is the public ip table column
+*/
+$publicColumn = 'source_address';
+/*
+	this is the black listed ip table name column name
+*/
+$blackColumn = 'malicious_i_p';
+/*
+	this is the vpn table name column name
+*/
+$vpnColumn = 'i_paddress';
 
 /**
  * Merge two arrays - but if one is blank or not an array, return the other.
@@ -123,39 +140,96 @@ $f3->route('GET /@route',function($f3){
     echo View::instance()->render($view);
 });
 
-function getMainDB(){
-	/*
-	main database server details
-	*/
-	$host = '172.25.20.40';
-	$port = '3306';
-	$database = 'arcsight';
-	$username = 'dashboard';
-	$password = 'dof1234';
-	return new DB\SQL(
-		'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $database,
-		$username,
-		$password
-	);
+$f3->route('GET /allData',function($f3){
+	global $vpnTableName,$publicTableName,$blackListedTableName,$publicColumn,$vpnColumn,$blackColumn;
+	set_time_limit(0);
+	ini_set("memory_limit",-1);
+	ini_set('mysql.connect_timeout', 1800);
+	ini_set('default_socket_timeout', 1800);
+	$db = outerDb();
+	$db1 = ipDb();
+	$response = [
+		"status" => 200,
+		"message" => "successfully retrieved data",
+		"publicData" => [],
+		"vpnData" => [],
+		"blackData" => []
+	];
+	$result = $db->query("select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName limit 100");
+	if(!empty($result) && $result->num_rows > 0){
+		while ($x = $result->fetch_assoc()) {
+			$query = "select * from ip2location where " . $x[$publicColumn] . " <= ip_to and " . $x[$publicColumn] . " >= ip_from";
+			$res = $db1->query($query);
+			if(!empty($res) && $res->num_rows > 0){
+				$row = $res->fetch_assoc();
+				$response['publicData'][] = arrayMerge($x,$row);
+				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
+				$res->free();
+			}
+		}
+		$result->free();
+	}
+	$q = "select * from $vpnTableName limit 100";
+	$result = $db->query($q);
+	if(!empty($result) && $result->num_rows > 0){
+		while ($x = $result->fetch_assoc()) {
+			$query = "select * from ip2location where inet_aton('" . $x[$vpnColumn] . "') <= ip_to and inet_aton('" . $x[$vpnColumn] . "') >= ip_from";
+			$res = $db1->query($query);
+			if(!empty($res) && $res->num_rows > 0){
+				$row = $res->fetch_assoc();
+				$response['vpnData'][] = arrayMerge($x,$row);
+				$res->free();
+			}
+		}
+		$result->free();
+	}
+	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName limit 100";
+	$result = $db->query($q);
+	if(!empty($result) && $result->num_rows > 0){
+		while ($x = $result->fetch_assoc()) {
+			$query = "select * from ip2location where " . $x[$blackColumn] . " <= ip_to and " . $x[$blackColumn] . " >= ip_from";
+			$res = $db1->query($query);
+			if(!empty($res) && $res->num_rows > 0){
+				$row = $res->fetch_assoc();
+				$response['data'][] = arrayMerge($x,$row);
+				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
+				$res->free();
+			}
+		}
+		$result->free();
+	}
+	$db1->close();
+	$db->close();
+	echo json_encode($response);
+});
+function outerDb(){
+	global $development;
+	if($development){
+		/*
+			rama krishna's local system main database server details
+		*/
+		$host = 'localhost';
+		$port = '3306';
+		$database = 'arcsight';
+		$username = 'root';
+		$password = '';
+	}else{
+		/*
+			main database server details
+		*/
+		$host = '172.25.20.40';
+		$port = '3306';
+		$database = 'arcsight';
+		$username = 'dashboard';
+		$password = 'dof1234';
+	}
+	$mysqli = new mysqli($host, $username, $password, $database);
+	if ($mysqli->connect_errno) {
+		die("mysqli connection error in db");
+	}
+	return $mysqli;
 }
-
-function getMainDB1(){
-	/*
-	rama krishna's local system main database server details
-	*/
-	$host = 'localhost';
-	$port = '3306';
-	$database = 'arcsight';
-	$username = 'root';
-	$password = '';
-	return new DB\SQL(
-		'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $database,
-		$username,
-		$password
-	);
-}
-
-function getDB(){
+function ipDb(){
 	/*
 	local system main database server details
 	list of tables available in this db is 
@@ -168,159 +242,111 @@ function getDB(){
 	$database = 'soc_ipct';
 	$username = 'root';
 	$password = '';
-	return new DB\SQL(
-		'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $database,
-		$username,
-		$password
-	);
+	$mysqli = new mysqli($host, $username, $password, $database);
+	if ($mysqli->connect_errno) {
+		die("mysqli connection error in db");
+	}
+	return $mysqli;
 }
-
-$f3->route('GET /vpnData',function($f3){
-	global $vpnTableName,$publicTableName,$blackListedTableName;
-	$time_start = microtime(true);
-	set_time_limit(0);
-	ini_set("memory_limit",-1);
-	ini_set('mysql.connect_timeout', 300);
-	ini_set('default_socket_timeout', 300);
-	ob_clean();
-	$db = getMainDB1();
-	$result = $db->exec("select * from $vpnTableName,soc_ipct.ip2location where inet_aton(i_paddress) <= ip_to and inet_aton(i_paddress) >= ip_from limit 100");
-	$response = [
-		"status" => 200,
-		"message" => "",
-		"data" => [],
-		"noresult" => []
-	];
-	if(!empty($result)){
-		$response['data'] = $result;
-	}
-	echo json_encode($response);
-});
-
 $f3->route('GET /publicData',function($f3){
-	global $vpnTableName,$publicTableName,$blackListedTableName;
-	
-	$time_start = microtime(true);
+	global $vpnTableName,$publicTableName,$blackListedTableName,$publicColumn,$vpnColumn,$blackColumn;
 	set_time_limit(0);
 	ini_set("memory_limit",-1);
 	ini_set('mysql.connect_timeout', 300);
 	ini_set('default_socket_timeout', 300);
 	ob_clean();
-	$db = getMainDB1();
+	$db = outerDb();
+	$db1 = ipDb();
 	$response = [
 		"status" => 200,
-		"message" => "",
-		"data" => [],
-		"noresult" => []
+		"message" => "successfully retrieved data",
+		"data" => []
 	];
-	$result = $db->exec("select *,INET_NTOA(source_address) as i_paddress from $publicTableName,soc_ipct.ip2location where source_address <= ip_to and source_address >= ip_from limit 100");
-	if(!empty($result)){
-		$response['data'] = $result;
+	$result = $db->query("select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName limit 100");
+	if(!empty($result) && $result->num_rows > 0){
+		while ($x = $result->fetch_assoc()) {
+			$query = "select * from ip2location where " . $x[$publicColumn] . " <= ip_to and " . $x[$publicColumn] . " >= ip_from";
+			$res = $db1->query($query);
+			if(!empty($res) && $res->num_rows > 0){
+				$row = $res->fetch_assoc();
+				$response['data'][] = arrayMerge($x,$row);
+				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
+				$res->free();
+			}
+		}
+		$result->free();
 	}
+	$db1->close();
+	$db->close();
 	echo json_encode($response);
 });
-
+$f3->route('GET /vpnData',function($f3){
+	global $vpnTableName,$publicTableName,$blackListedTableName,$publicColumn,$vpnColumn,$blackColumn;
+	set_time_limit(0);
+	ini_set("memory_limit",-1);
+	ini_set('mysql.connect_timeout', 300);
+	ini_set('default_socket_timeout', 300);
+	ob_clean();
+	$db = outerDb();
+	$db1 = ipDb();
+	$response = [
+		"status" => 200,
+		"message" => "successfully retrieved data",
+		"data" => []
+	];
+	$q = "select * from $vpnTableName limit 100";
+	$result = $db->query($q);
+	if(!empty($result) && $result->num_rows > 0){
+		while ($x = $result->fetch_assoc()) {
+			$query = "select * from ip2location where inet_aton('" . $x[$vpnColumn] . "') <= ip_to and inet_aton('" . $x[$vpnColumn] . "') >= ip_from";
+			$res = $db1->query($query);
+			if(!empty($res) && $res->num_rows > 0){
+				$row = $res->fetch_assoc();
+				$response['data'][] = arrayMerge($x,$row);
+				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
+				$res->free();
+			}
+		}
+		$result->free();
+	}
+	$db1->close();
+	$db->close();
+	echo json_encode($response);
+});
 $f3->route('GET /blackListedData',function($f3){
-	global $vpnTableName,$publicTableName,$blackListedTableName;
-	$time_start = microtime(true);
+	global $vpnTableName,$publicTableName,$blackListedTableName,$publicColumn,$vpnColumn,$blackColumn;
 	set_time_limit(0);
 	ini_set("memory_limit",-1);
 	ini_set('mysql.connect_timeout', 300);
 	ini_set('default_socket_timeout', 300);
 	ob_clean();
-	$db = getMainDB1();
+	$db = outerDb();
+	$db1 = ipDb();
 	$response = [
 		"status" => 200,
-		"message" => "",
-		"data" => [],
-		"noresult" => []
+		"message" => "successfully retrieved data",
+		"data" => []
 	];
-	$result = $db->exec("select *,INET_NTOA(malicious_i_p) as i_paddress from $blackListedTableName,soc_ipct.ip2location where malicious_i_p <= ip_to and malicious_i_p >= ip_from limit 100");
-	if(!empty($result)){
-		$response['data'] = $result;
+	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName limit 100";
+	$result = $db->query($q);
+	if(!empty($result) && $result->num_rows > 0){
+		while ($x = $result->fetch_assoc()) {
+			$query = "select * from ip2location where " . $x[$blackColumn] . " <= ip_to and " . $x[$blackColumn] . " >= ip_from";
+			$res = $db1->query($query);
+			if(!empty($res) && $res->num_rows > 0){
+				$row = $res->fetch_assoc();
+				$response['data'][] = arrayMerge($x,$row);
+				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
+				$res->free();
+			}
+		}
+		$result->free();
 	}
+	$db1->close();
+	$db->close();
 	echo json_encode($response);
-});
-$f3->route('GET /allData',function($f3){
-	global $vpnTableName,$publicTableName,$blackListedTableName;
-	set_time_limit(0);
-	ini_set("memory_limit",-1);
-	ini_set('mysql.connect_timeout', 1800);
-	ini_set('default_socket_timeout', 1800);
-	ob_clean();
-	$db = getMainDB1();
-	$response = [
-		"status" => 200,
-		"message" => "",
-		"publicData" => [],
-		"blackData" => [],
-		"vpnData" => []
-	];
-	$result = $db->exec("select * from $vpnTableName,soc_ipct.ip2location where inet_aton(i_paddress) <= ip_to and inet_aton(i_paddress) >= ip_from limit 100");
-	if(!empty($result)){
-		$response['vpnData'] = $result;
-	}
-	$result1 = $db->exec("select *,source_address as i_paddress from $publicTableName,soc_ipct.ip2location where source_address <= ip_to and source_address >= ip_from limit 100");
-	if(!empty($result1)){
-		$response['publicData'] = $result1;
-	}
-	$result2 = $db->exec("select *,malicious_i_p as i_paddress from $blackListedTableName,soc_ipct.ip2location where malicious_i_p <= ip_to and malicious_i_p >= ip_from limit 100");
-	if(!empty($result2)){
-		$response['blackData'] = $result2;
-	}
-	echo json_encode($response);
-});
-$f3->route('GET /time',function($f3){
-	global $vpnTableName,$publicTableName,$blackListedTableName;
-	$time_start = microtime(true);
-	set_time_limit(0);
-	ini_set("memory_limit",-1);
-	ini_set('mysql.connect_timeout', 1800);
-	ini_set('default_socket_timeout', 1800);
-	ob_clean();
-	$db = getMainDB1();
-	$response = [
-		"status" => 200,
-		"message" => "",
-		"publicData" => [],
-		"blackData" => [],
-		"vpnData" => []
-	];
-
-	$result = $db->exec("select * from $vpnTableName,soc_ipct.ip2location where inet_aton(i_paddress) <= ip_to and inet_aton(i_paddress) >= ip_from limit 100");
-	if(!empty($result)){
-		$response['vpnData'] = $result;
-	}
-	$result1 = $db->exec("select *,source_address as i_paddress from $publicTableName,soc_ipct.ip2location where source_address <= ip_to and source_address >= ip_from limit 100");
-	if(!empty($result1)){
-		$response['publicData'] = $result1;
-	}
-	$result2 = $db->exec("select *,malicious_i_p as i_paddress from $blackListedTableName,soc_ipct.ip2location where malicious_i_p <= ip_to and malicious_i_p >= ip_from limit 100");
-	if(!empty($result2)){
-		$response['blackData'] = $result2;
-	}
-	//echo json_encode($response);
-
-	$time_end = microtime(true);
-
-	//dividing with 60 will give the execution time in minutes other wise seconds
-	$execution_time = ($time_end - $time_start);
-	echo '<b>Total Execution Time:</b> '.$execution_time.' Seconds';
-});
-
-
-$f3->route('GET /ip',function($f3){
-	var_dump(long2ip($_GET['ip']));
-	$db = getMainDB1();
-	var_dump($db->exec("select INET_NTOA(malicious_i_p) from arc_ald_n783qv limit 10"));
 });
 
 //var_dump(exec('c:\wamp\bin\mysql\mysql5.6.17\bin\mysqldump --user=root --password= --host=localhost vatsav > ./11111111111.sql') );
 
 $f3->run();
-
-//public ippen avatledu
-//blacklisted ip open avataledu
-//different colors for markers
-//table lo 3 buttons
-//google visualization view total load cheyyali
