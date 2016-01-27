@@ -274,7 +274,8 @@ body {
 	z-index: 1;
 }
 .tabs li{
-	width: 33.3333333333333333333%;
+	width : 33.3333333333333333333%;
+	width : calc(33.3333333333333333333% - 1px);
 	float: left;
 	line-height: 30px;
 	text-align: center;

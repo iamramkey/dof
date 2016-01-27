@@ -2,7 +2,7 @@
 session_start();
 
 
-$development = false;
+$development = true;
 
 // Kickstart the framework
 $f3 = require('lib/base.php');
@@ -155,51 +155,48 @@ $f3->route('GET /allData',function($f3){
 		"vpnData" => [],
 		"blackData" => []
 	];
-	$result = $db->query("select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName limit 100");
-	if(!empty($result) && $result->num_rows > 0){
-		while ($x = $result->fetch_assoc()) {
-			$query = "select * from ip2location where " . $x[$publicColumn] . " <= ip_to and " . $x[$publicColumn] . " >= ip_from";
-			$res = $db1->query($query);
-			if(!empty($res) && $res->num_rows > 0){
-				$row = $res->fetch_assoc();
-				$response['publicData'][] = arrayMerge($x,$row);
-				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
-				$res->free();
-			}
-		}
-		$result->free();
-	}
 	$q = "select * from $vpnTableName limit 100";
-	$result = $db->query($q);
-	if(!empty($result) && $result->num_rows > 0){
-		while ($x = $result->fetch_assoc()) {
+	$result = $db->exec($q);
+	if(count($result) > 0){
+		foreach($result as $x) {
 			$query = "select * from ip2location where inet_aton('" . $x[$vpnColumn] . "') <= ip_to and inet_aton('" . $x[$vpnColumn] . "') >= ip_from";
-			$res = $db1->query($query);
-			if(!empty($res) && $res->num_rows > 0){
-				$row = $res->fetch_assoc();
+			$res = $db1->exec($query);
+			if(count($res) > 0){
+				$row = $res[0];
 				$response['vpnData'][] = arrayMerge($x,$row);
-				$res->free();
 			}
 		}
-		$result->free();
 	}
-	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName limit 100";
-	$result = $db->query($q);
-	if(!empty($result) && $result->num_rows > 0){
-		while ($x = $result->fetch_assoc()) {
-			$query = "select * from ip2location where " . $x[$blackColumn] . " <= ip_to and " . $x[$blackColumn] . " >= ip_from";
-			$res = $db1->query($query);
-			if(!empty($res) && $res->num_rows > 0){
-				$row = $res->fetch_assoc();
+	
+	$q = "select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName,ip2location where " . $publicColumn . " <= ip_to and " . $publicColumn . " >= ip_from";
+	$result = $db1->exec($q);
+	if(count($result) > 0){
+		/*foreach($result as $x) {
+			$query = "select * from ip2location where " . $x[$publicColumn] . " <= ip_to and " . $x[$publicColumn] . " >= ip_from";
+			$res = $db1->exec($query);
+			if(count($res) > 0){
+				$row = $res[0];
 				$response['data'][] = arrayMerge($x,$row);
-				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
-				$res->free();
+				//array_push($response['data'],arrayMerge($x,$res[0]));
 			}
-		}
-		$result->free();
+		}*/
+		$response['publicData'] = $result;
 	}
-	$db1->close();
-	$db->close();
+	
+	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName,ip2location where " . $blackColumn . " <= ip_to and " . $blackColumn . " >= ip_from";
+	$result = $db1->exec($q);
+	if(count($result) > 0){
+		/*foreach($result as $x) {
+			$query = "select * from ip2location where " . $x[$blackColumn] . " <= ip_to and " . $x[$blackColumn] . " >= ip_from";
+			$res = $db1->exec($query);
+			if(count($res) > 0){
+				$row = $res[0];
+				$response['data'][] = arrayMerge($x,$row);
+				//array_push($response['data'],arrayMerge($x,$res[0]));
+			}
+		}*/
+		$response['blackData'] = $result;
+	}
 	echo json_encode($response);
 });
 function outerDb(){
@@ -223,11 +220,11 @@ function outerDb(){
 		$username = 'dashboard';
 		$password = 'dof1234';
 	}
-	$mysqli = new mysqli($host, $username, $password, $database);
-	if ($mysqli->connect_errno) {
-		die("mysqli connection error in db");
-	}
-	return $mysqli;
+	return new DB\SQL(
+		'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $database,
+		$username,
+		$password
+	);
 }
 function ipDb(){
 	/*
@@ -242,11 +239,11 @@ function ipDb(){
 	$database = 'soc_ipct';
 	$username = 'root';
 	$password = '';
-	$mysqli = new mysqli($host, $username, $password, $database);
-	if ($mysqli->connect_errno) {
-		die("mysqli connection error in db");
-	}
-	return $mysqli;
+	return new DB\SQL(
+		'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $database,
+		$username,
+		$password
+	);
 }
 $f3->route('GET /publicData',function($f3){
 	global $vpnTableName,$publicTableName,$blackListedTableName,$publicColumn,$vpnColumn,$blackColumn;
@@ -262,22 +259,20 @@ $f3->route('GET /publicData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$result = $db->query("select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName limit 100");
-	if(!empty($result) && $result->num_rows > 0){
-		while ($x = $result->fetch_assoc()) {
+	$q = "select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName,ip2location where " . $publicColumn . " <= ip_to and " . $publicColumn . " >= ip_from";
+	$result = $db1->exec($q);
+	if(count($result) > 0){
+		/*foreach($result as $x) {
 			$query = "select * from ip2location where " . $x[$publicColumn] . " <= ip_to and " . $x[$publicColumn] . " >= ip_from";
-			$res = $db1->query($query);
-			if(!empty($res) && $res->num_rows > 0){
-				$row = $res->fetch_assoc();
+			$res = $db1->exec($query);
+			if(count($res) > 0){
+				$row = $res[0];
 				$response['data'][] = arrayMerge($x,$row);
-				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
-				$res->free();
+				//array_push($response['data'],arrayMerge($x,$res[0]));
 			}
-		}
-		$result->free();
+		}*/
+		$response['data'] = $result;
 	}
-	$db1->close();
-	$db->close();
 	echo json_encode($response);
 });
 $f3->route('GET /vpnData',function($f3){
@@ -295,22 +290,18 @@ $f3->route('GET /vpnData',function($f3){
 		"data" => []
 	];
 	$q = "select * from $vpnTableName limit 100";
-	$result = $db->query($q);
-	if(!empty($result) && $result->num_rows > 0){
-		while ($x = $result->fetch_assoc()) {
+	$result = $db->exec($q);
+	if(count($result) > 0){
+		foreach($result as $x) {
 			$query = "select * from ip2location where inet_aton('" . $x[$vpnColumn] . "') <= ip_to and inet_aton('" . $x[$vpnColumn] . "') >= ip_from";
-			$res = $db1->query($query);
-			if(!empty($res) && $res->num_rows > 0){
-				$row = $res->fetch_assoc();
+			$res = $db1->exec($query);
+			if(count($res) > 0){
+				$row = $res[0];
 				$response['data'][] = arrayMerge($x,$row);
-				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
-				$res->free();
+				//array_push($response['data'],arrayMerge($x,$res[0]));
 			}
 		}
-		$result->free();
 	}
-	$db1->close();
-	$db->close();
 	echo json_encode($response);
 });
 $f3->route('GET /blackListedData',function($f3){
@@ -327,26 +318,136 @@ $f3->route('GET /blackListedData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName limit 100";
-	$result = $db->query($q);
-	if(!empty($result) && $result->num_rows > 0){
-		while ($x = $result->fetch_assoc()) {
+	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName,ip2location where " . $blackColumn . " <= ip_to and " . $blackColumn . " >= ip_from";
+	$result = $db1->exec($q);
+	if(count($result) > 0){
+		/*foreach($result as $x) {
 			$query = "select * from ip2location where " . $x[$blackColumn] . " <= ip_to and " . $x[$blackColumn] . " >= ip_from";
-			$res = $db1->query($query);
-			if(!empty($res) && $res->num_rows > 0){
-				$row = $res->fetch_assoc();
+			$res = $db1->exec($query);
+			if(count($res) > 0){
+				$row = $res[0];
 				$response['data'][] = arrayMerge($x,$row);
-				//array_push($response['data'],arrayMerge($x,$res->fetch_assoc()));
-				$res->free();
+				//array_push($response['data'],arrayMerge($x,$res[0]));
 			}
-		}
-		$result->free();
+		}*/
+		$response['data'] = $result;
 	}
-	$db1->close();
-	$db->close();
 	echo json_encode($response);
 });
 
+$f3->route('GET /import',function($f3){
+	$time_start = microtime(true);
+	echo "Execution started";
+	global $vpnTableName,$publicTableName,$blackListedTableName,$publicColumn,$vpnColumn,$blackColumn;
+	set_time_limit(0);
+	ini_set("memory_limit",-1);
+	ini_set('mysql.connect_timeout', 6000);
+	ini_set('default_socket_timeout', 6000);
+	$db = outerDb();
+	$db1 = ipDb();
+	
+	$f3->set('ONERROR', function($f3) {
+        // custom error handler code goes here
+        // use this if you want to display errors in a
+        // format consistent with your site's theme		
+	
+		$elog = new Log( 'logs/' . date('Y-m-d_H-i-s') . '_error.log');
+		$elog->write(" ********* An error occurred **************");
+		$elog->write($f3->get('ERROR.code'));
+		$elog->write($f3->get('ERROR.status'));
+		$elog->write($f3->get('ERROR.text'));
+		$elog->write($f3->get('ERROR.trace'));
+    });
+	
+	$elog = new Log( 'logs/' . date('Y-m-d_H-i-s') . '_public_info.log');
+	$truncated = $db1->exec("truncate table $publicTableName");
+	if(empty($truncated)){
+		$elog->write("truncated $publicTableName successfully");
+	}else{
+		$elog->write("truncate failed on table name : $publicTableName");
+		$elog->write("Reason is ");
+		$elog->write($db1->log());
+		exit();
+	}
+	$elog->write("reading $publicTableName data in outerDb");
+	$result = $db->exec("select * from $publicTableName");
+	$elog->write("$publicTableName is having " . count($result) . " rows");
+	$insertArr = [];
+	if(count($result) > 0){
+		foreach($result as $x) {
+			$insertSQL = "INSERT INTO `" . $publicTableName . "` SET ";
+			foreach ($x as $field => $value) {
+				$insertSQL .= " `" . $field . "` = '" . $value . "', ";
+			}
+			$insertSQL = trim($insertSQL, ", ");
+			$elog->write("query is");
+			$elog->write("$insertSQL");
+			$insertArr[] = $insertSQL;
+		}
+		$insertRes = $db1->exec($insertArr);
+		if($insertRes){
+			$elog->write("Insert on  $publicTableName is successfull");		
+		}else{
+			$elog->write("Insert on $publicTableName is failed");
+			$elog->write("Reason is ");
+			$elog->write($db1->log());
+		}
+	}	
+	
+	$time_end = microtime(true);
+
+	//dividing with 60 will give the execution time in minutes other wise seconds
+	$execution_time = ($time_end - $time_start);
+	echo '<br><b>Total Execution Time:</b> '.$execution_time.' Seconds';
+	
+	$elog->write('Total Execution Time: '.$execution_time.' Seconds');
+	//blacklisted table importing
+	$elog = new Log( 'logs/' . date('Y-m-d_H-i-s') . '_black_info.log');
+	$truncated = $db1->exec("truncate table $blackListedTableName");
+	if(empty($truncated)){
+		$elog->write("truncated $blackListedTableName successfully");
+	}else{
+		$elog->write("truncate failed on table name : $blackListedTableName");
+		$elog->write("Reason is ");
+		$elog->write($db1->log());
+		exit();
+	}
+	$elog->write("reading $blackListedTableName data in outerDb");
+	$result = $db->exec("select * from $blackListedTableName");
+	$elog->write("$blackListedTableName is having " . count($result) . " rows");
+	$insertArr = [];
+	if(count($result) > 0){
+		foreach($result as $x) {
+			$insertSQL = "INSERT INTO `" . $blackListedTableName . "` SET ";
+			foreach ($x as $field => $value) {
+				$insertSQL .= " `" . $field . "` = '" . $value . "', ";
+			}
+			$insertSQL = trim($insertSQL, ", ");
+			$elog->write("query is");
+			$elog->write("$insertSQL");
+			$insertArr[] = $insertSQL;
+		}
+		$insertRes = $db1->exec($insertArr);
+		if($insertRes){
+			$elog->write("Insert on  $blackListedTableName is successfull");		
+		}else{
+			$elog->write("Insert on $blackListedTableName is failed");
+			$elog->write("Reason is ");
+			$elog->write($db1->log());
+		}
+	}
+	
+	$time_end = microtime(true);
+
+	//dividing with 60 will give the execution time in minutes other wise seconds
+	$execution_time = ($time_end - $time_start);
+	$elog->write('Total Execution Time: '.$execution_time.' Seconds');
+	echo '<br><b>Total Execution Time:</b> '.$execution_time.' Seconds';
+	echo "<br>Successfully imported 2 tables";
+});
+
 //var_dump(exec('c:\wamp\bin\mysql\mysql5.6.17\bin\mysqldump --user=root --password= --host=localhost vatsav > ./11111111111.sql') );
+
+
 
 $f3->run();
