@@ -168,7 +168,7 @@ $f3->route('GET /allData',function($f3){
 		}
 	}
 	
-	$q = "select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName,ip2location where " . $publicColumn . " <= ip_to and " . $publicColumn . " >= ip_from";
+	$q = "select * from $publicTableName";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {
@@ -183,7 +183,7 @@ $f3->route('GET /allData',function($f3){
 		$response['publicData'] = $result;
 	}
 	
-	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName,ip2location where " . $blackColumn . " <= ip_to and " . $blackColumn . " >= ip_from";
+	$q = "select * from $blackListedTableName";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {
@@ -259,7 +259,7 @@ $f3->route('GET /publicData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select *,INET_NTOA($publicColumn) as i_paddress from $publicTableName,ip2location where " . $publicColumn . " <= ip_to and " . $publicColumn . " >= ip_from";
+	$q = "select * from $publicTableName limit 100";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {
@@ -318,7 +318,7 @@ $f3->route('GET /blackListedData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select *,INET_NTOA($blackColumn) as i_paddress from $blackListedTableName,ip2location where " . $blackColumn . " <= ip_to and " . $blackColumn . " >= ip_from";
+	$q = "select * from $blackListedTableName limit 100";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {
@@ -373,16 +373,24 @@ $f3->route('GET /import',function($f3){
 	$result = $db->exec("select * from $publicTableName");
 	$elog->write("$publicTableName is having " . count($result) . " rows");
 	$insertArr = [];
-	if(count($result) > 0){
+	if(count($result) > 0){		
 		foreach($result as $x) {
-			$insertSQL = "INSERT INTO `" . $publicTableName . "` SET ";
-			foreach ($x as $field => $value) {
-				$insertSQL .= " `" . $field . "` = '" . $value . "', ";
+			$query = "select *,INET_NTOA('" . $x[$publicColumn] . "') as i_paddress from ip2location where '" . $x[$publicColumn] . "' <= ip_to and '" . $x[$publicColumn] . "' >= ip_from";
+			$res = $db1->exec($query);
+			if(!empty($res)){
+				$finalResult = arrayMerge($x,$res[0]);
+				$insertSQL = "INSERT INTO `" . $publicTableName . "` SET ";
+				foreach ($finalResult as $field => $value) {
+					if($field == 'id'){
+						continue;						
+					}
+					$insertSQL .= " `" . $field . "` = '" . addslashes($value) . "', ";
+				}
+				$insertSQL = trim($insertSQL, ", ");
+				$elog->write("query is");
+				$elog->write("$insertSQL");
+				$insertArr[] = $insertSQL;
 			}
-			$insertSQL = trim($insertSQL, ", ");
-			$elog->write("query is");
-			$elog->write("$insertSQL");
-			$insertArr[] = $insertSQL;
 		}
 		$insertRes = $db1->exec($insertArr);
 		if($insertRes){
@@ -418,14 +426,22 @@ $f3->route('GET /import',function($f3){
 	$insertArr = [];
 	if(count($result) > 0){
 		foreach($result as $x) {
-			$insertSQL = "INSERT INTO `" . $blackListedTableName . "` SET ";
-			foreach ($x as $field => $value) {
-				$insertSQL .= " `" . $field . "` = '" . $value . "', ";
+			$query = "select *,INET_NTOA('" . $x[$blackColumn] . "') as i_paddress from ip2location where '" . $x[$blackColumn] . "' <= ip_to and '" . $x[$blackColumn] . "' >= ip_from";
+			$res = $db1->exec($query);
+			if(!empty($res)){
+				$finalResult = arrayMerge($x,$res[0]);
+				$insertSQL = "INSERT INTO `" . $blackListedTableName . "` SET ";
+				foreach ($finalResult as $field => $value) {
+					if($field == 'id'){
+						continue;						
+					}
+					$insertSQL .= " `" . $field . "` = '" . addslashes($value) . "', ";
+				}
+				$insertSQL = trim($insertSQL, ", ");
+				$elog->write("query is");
+				$elog->write("$insertSQL");
+				$insertArr[] = $insertSQL;
 			}
-			$insertSQL = trim($insertSQL, ", ");
-			$elog->write("query is");
-			$elog->write("$insertSQL");
-			$insertArr[] = $insertSQL;
 		}
 		$insertRes = $db1->exec($insertArr);
 		if($insertRes){
@@ -448,6 +464,6 @@ $f3->route('GET /import',function($f3){
 
 //var_dump(exec('c:\wamp\bin\mysql\mysql5.6.17\bin\mysqldump --user=root --password= --host=localhost vatsav > ./11111111111.sql') );
 
-
+//select *,INET_NTOA(source_address) as i_paddress from arc_ald_6idppj,ip2location where source_address <= ip_to and source_address>= ip_from
 
 $f3->run();

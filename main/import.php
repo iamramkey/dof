@@ -39,6 +39,26 @@ $publicColumn = 'source_address';
 */
 $blackColumn = 'malicious_i_p';
 
+/**
+ * Merge two arrays - but if one is blank or not an array, return the other.
+ * @param $a array First array, into which the second array will be merged
+ * @param $b array Second array, with the data to be merged
+ * @param $unique boolean If true, remove duplicate values before returning
+ */
+function arrayMerge($a, $b, $unique = false) {
+	if (empty($b)) {
+		return;  // No changes to be made to $a
+	}
+	if (empty($a)) {
+		$a = $b;
+		return;
+	}
+	$a = array_merge($a, $b);
+	if ($unique) {
+		$a = array_unique($a);
+	}
+	return $a;
+}
 function outerDb(){
 	global $development;
 	if($development){
@@ -125,14 +145,22 @@ function ipDb(){
 	$insertArr = [];
 	if(count($result) > 0){
 		foreach($result as $x) {
-			$insertSQL = "INSERT INTO `" . $publicTableName . "` SET ";
-			foreach ($x as $field => $value) {
-				$insertSQL .= " `" . $field . "` = '" . $value . "', ";
+			$query = "select *,INET_NTOA('" . $x[$publicColumn] . "') as i_paddress from ip2location where '" . $x[$publicColumn] . "' <= ip_to and '" . $x[$publicColumn] . "' >= ip_from";
+			$res = $db1->exec($query);
+			if(!empty($res)){
+				$finalResult = arrayMerge($x,$res[0]);
+				$insertSQL = "INSERT INTO `" . $publicTableName . "` SET ";
+				foreach ($finalResult as $field => $value) {
+					if($field == 'id'){
+						continue;						
+					}
+					$insertSQL .= " `" . $field . "` = '" . addslashes($value) . "', ";
+				}
+				$insertSQL = trim($insertSQL, ", ");
+				$elog->write("query is");
+				$elog->write("$insertSQL");
+				$insertArr[] = $insertSQL;
 			}
-			$insertSQL = trim($insertSQL, ", ");
-			$elog->write("query is");
-			$elog->write("$insertSQL");
-			$insertArr[] = $insertSQL;
 		}
 		$insertRes = $db1->exec($insertArr);
 		if($insertRes){
@@ -169,14 +197,22 @@ function ipDb(){
 	$insertArr = [];
 	if(count($result) > 0){
 		foreach($result as $x) {
-			$insertSQL = "INSERT INTO `" . $blackListedTableName . "` SET ";
-			foreach ($x as $field => $value) {
-				$insertSQL .= " `" . $field . "` = '" . $value . "', ";
+			$query = "select *,INET_NTOA('" . $x[$blackColumn] . "') as i_paddress from ip2location where '" . $x[$blackColumn] . "' <= ip_to and '" . $x[$blackColumn] . "' >= ip_from";
+			$res = $db1->exec($query);
+			if(!empty($res)){
+				$finalResult = arrayMerge($x,$res[0]);
+				$insertSQL = "INSERT INTO `" . $blackListedTableName . "` SET ";
+				foreach ($finalResult as $field => $value) {
+					if($field == 'id'){
+						continue;						
+					}
+					$insertSQL .= " `" . $field . "` = '" . addslashes($value) . "', ";
+				}
+				$insertSQL = trim($insertSQL, ", ");
+				$elog->write("query is");
+				$elog->write("$insertSQL");
+				$insertArr[] = $insertSQL;
 			}
-			$insertSQL = trim($insertSQL, ", ");
-			$elog->write("query is");
-			$elog->write("$insertSQL");
-			$insertArr[] = $insertSQL;
 		}
 		$insertRes = $db1->exec($insertArr);
 		if($insertRes){
@@ -187,7 +223,6 @@ function ipDb(){
 			$elog->write($db1->log());
 		}
 	}	
-	
 	$f3->route('GET /NoNeXiStInGrOuTe',function($f3){
 	
 	});
@@ -202,34 +237,4 @@ function ipDb(){
 	//$f3->run();
 
 	
-	/*
-	#blacklistedtable
-	
-	CREATE TABLE arc_ald_n783qv (
-	 ID int NOT NULL AUTO_INCREMENT primary key,
-	 malicious_i_p bigint(20) DEFAULT NULL,
-	 malicious_domain varchar(1000) COLLATE utf8_bin DEFAULT NULL,
-	 message varchar(1000) COLLATE utf8_bin DEFAULT NULL,
-	 creation_time datetime(3) NOT NULL,
-	 last_modified_time datetime(3) NOT NULL,
-	 count int(11) NOT NULL,
-	 hash_code bigint(20) NOT NULL,
-	 KEY ARC_ALD_N783QV_main (malicious_i_p),
-	 KEY ARC_ALD_N783QV_hashIndex (hash_code)
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-	
-	#publictablecreation
-	CREATE TABLE arc_ald_6idppj (
-	  ID int NOT NULL AUTO_INCREMENT primary key,
-	  source_address bigint(20) DEFAULT NULL,
-	  destination_address bigint(20) DEFAULT NULL,
-	  port int(11) DEFAULT NULL,
-	  creation_time datetime(3) NOT NULL,
-	  last_modified_time datetime(3) NOT NULL,
-	  count int(11) NOT NULL,
-	  hash_code bigint(20) NOT NULL,
-	  KEY ARC_ALD_6IDPPJ_main (source_address,destination_address,port),
-	  KEY ARC_ALD_6IDPPJ_hashIndex (hash_code)
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
-	*/
 ?>
