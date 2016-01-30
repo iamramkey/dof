@@ -13,7 +13,7 @@ $f3->config('config.ini');
 $f3->set('DEBUG',0);
 
 
-$development = true;
+$development = false;
 
 if($development){
 	date_default_timezone_set ('Asia/Calcutta');

@@ -47,7 +47,6 @@ body {
 }
 #mapCanvas1 {
 	position: absolute;
-	left: 0;
 	width: 100%;
 	bottom: 0;
 	top: 60px;
@@ -158,27 +157,13 @@ body {
 	height: 19%;
 	overflow: auto;
 	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-	background-color: #f0f0f0;
 	font-family: Helvetica, sans-serif;
-	border: 1px solid rgba(0,0,0,.1);
+	background-color: rgba(0,0,0,.75);
 }
 .datatable {
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	border: 1px solid #c0c0c0;
-	-moz-border-radius-bottomleft: 0px;
-	-webkit-border-bottom-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	-webkit-border-bottom-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	-webkit-border-top-right-radius: 0px;
-	border-top-right-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	-webkit-border-top-left-radius: 0px;
-	border-top-left-radius: 0px;
 }
 .datatable table {
 	border-collapse: collapse;
@@ -188,83 +173,24 @@ body {
 	margin: 0px;
 	padding: 0px;
 }
-.datatable tr:last-child td:last-child {
-	-moz-border-radius-bottomright: 0px;
-	-webkit-border-bottom-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-.datatable table tr:first-child td:first-child {
-	-moz-border-radius-topleft: 0px;
-	-webkit-border-top-left-radius: 0px;
-	border-top-left-radius: 0px;
-}
-.datatable table tr:first-child td:last-child {
-	-moz-border-radius-topright: 0px;
-	-webkit-border-top-right-radius: 0px;
-	border-top-right-radius: 0px;
-}
-.datatable tr:last-child td:first-child {
-	-moz-border-radius-bottomleft: 0px;
-	-webkit-border-bottom-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-}
-.datatable tr:hover td {}
-.datatable tbody tr:nth-child(even) {
-	background-color: #FFD4AD;
-}
-.datatable tbody tr:nth-child(odd) {
-	background-color: #ffffff;
-}
 .datatable td {
 	vertical-align: middle;
-	border: 1px solid #c0c0c0;
-	border-width: 0px 1px 1px 0px;
 	text-align: left;
 	padding: 7px;
 	font-size: 11px;
 	font-family: Helvetica, sans-serif;
-	color: #333;
+	color: #aaa;
 	word-wrap: break-word;
 	word-break: break-all;
 	white-space: normal;
 }
-.datatable tr:last-child td {
-	border-width: 0px 1px 0px 0px;
-}
-.datatable tr td:last-child {
-	border-width: 0px 0px 1px 0px;
-}
-.datatable tr:last-child td:last-child {
-	border-width: 0px 0px 0px 0px;
-}
-.datatable thead tr:first-child td {
-	background: -o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);
-	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00));
-	background: -moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");
-	background: -o-linear-gradient(top, #ff7f00, bf5f00);
-	background-color: #ff7f00;
-	border: 0px solid #c0c0c0;
-	text-align: center;
-	border-width: 0px 0px 1px 1px;
+.datatable thead tr:first-child td{
 	font-size: 13px;
 	font-family: Helvetica, sans-serif;
 	font-weight: bold;
-	color: #ffffff;
-}/*
-.datatable tr:first-child:hover td {
-	background: -o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);
-	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00));
-	background: -moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");
-	background: -o-linear-gradient(top, #ff7f00, bf5f00);
-	background-color: #ff7f00;
-}*/
-.datatable thead tr:first-child td:first-child {
-	border-width: 0px 0px 1px 0px;
-}
-.datatable thead tr:first-child td:last-child {
-	border-width: 0px 0px 1px 1px;
+	color: #ccc;
+	border-bottom: 1px solid #aaa;
+	white-space: nowrap;
 }
 .tabs{
 	width: 100%;
@@ -274,38 +200,36 @@ body {
 	z-index: 1;
 }
 .tabs li{
-	width : 33.3333333333333333333%;
-	width : calc(33.3333333333333333333% - 1px);
+	width : 50%;
 	float: left;
 	line-height: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: #333;
+	color: #999;
 	border-left: 1px solid #ccc;
 	margin-left: -1px;
 	border-bottom: 1px solid #c0c0c0;
-	background-color: #e0e0e0;
 	cursor: pointer;
+	background-color: rgba(0,0,0,.3);
 }
 .tabs li:first-child{
 	border-left: none;
 	margin-left: 0;
 }
 .tabs li:hover{
-	background-color: #fff;
+	background-color: rgba(0,0,0,.9);
 }
 .tabs li.active{
-	background-color: #fff;
+	background-color: rgba(0,0,0,.9);
 	font-weight: bold;
+	color: #ccc;
 }
 #tableContainer{
 	position: absolute;
 	top: 30px;
 	bottom: 0;
 	overflow: auto;
-	padding: 1%;
-	width: 98%;
-	background-color: #fff;
+	width: 100%;
 }
 #googleChartDiv{
 	position: absolute;
@@ -313,6 +237,9 @@ body {
 	left: 0;
 	right: 0;
 	margin: auto;
-	height: 81%;
-	padding: 10px 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.putLeft{
+	left: 100%;
 }
