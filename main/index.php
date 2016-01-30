@@ -2,7 +2,7 @@
 session_start();
 
 
-$development = false;
+$development = true;
 
 // Kickstart the framework
 $f3 = require('lib/base.php');
