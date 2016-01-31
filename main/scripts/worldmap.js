@@ -453,6 +453,12 @@ function generateTableHeaders(markerData){
 	if(markerData.i_paddress){
 		tr.append('<td>IP Address</td>');
 	}
+	if(markerData.destination_address){
+		tr.append('<td>Destination Address</td>');
+	}
+	if(markerData.port){
+		tr.append('<td>Port</td>');
+	}
 	if(markerData.user_name){
 		tr.append('<td>User Name</td>');
 	}
@@ -467,13 +473,13 @@ function generateTableHeaders(markerData){
 	}
 	if(markerData.count){
 		tr.append('<td>Attack Count</td>');
-	}
+	}/*
 	if(markerData.latitude){
 		tr.append('<td>Latitude</td>');
 	}
 	if(markerData.longitude){
 		tr.append('<td>Longitude</td>');
-	}
+	}*/
 	if(markerData.malicious_domain){
 		tr.append('<td>Malicious Domain</td>');
 	}
@@ -507,6 +513,12 @@ function fillTable(){
 			if(markerData.i_paddress){
 				tr.append('<td>' + markerData.i_paddress + '</td>');
 			}
+			if(markerData.destination_address){
+				tr.append('<td>' + markerData.destination_address + '</td>');
+			}
+			if(markerData.port){
+				tr.append('<td>' + markerData.port + '</td>');
+			}
 			if(markerData.user_name){
 				tr.append('<td>' + markerData.user_name + '</td>');
 			}
@@ -521,13 +533,13 @@ function fillTable(){
 			}
 			if(markerData.count){
 				tr.append('<td>' + markerData.count + '</td>');
-			}
+			}/*
 			if(markerData.latitude){
 				tr.append('<td>' + markerData.latitude + '</td>');
 			}
 			if(markerData.longitude){
 				tr.append('<td>' + markerData.longitude + '</td>');
-			}
+			}*/
 			if(markerData.malicious_domain){
 				tr.append('<td>' + markerData.malicious_domain + '</td>');
 			}
@@ -545,6 +557,12 @@ function getTooltip(markerData){
 	if(markerData.i_paddress){
 		string += 'IP Address :' + markerData.i_paddress + '\n';
 	}
+	if(markerData.destination_address){
+		string += 'Destination Address :' + markerData.destination_address + '\n';
+	}
+	if(markerData.port){
+		string += 'Port :' + markerData.port + '\n';
+	}
 	if(markerData.user_name){
 		string += 'User Name :' + markerData.user_name + '\n';
 	}
@@ -559,13 +577,13 @@ function getTooltip(markerData){
 	}
 	if(markerData.count){
 		string += 'Attack Count :' + markerData.count + '\n';
-	}
+	}/*
 	if(markerData.latitude){
 		string += 'Latitude :' + markerData.latitude + '\n';
 	}
 	if(markerData.longitude){
 		string += 'Longitude :' + markerData.longitude + '\n';
-	}
+	}*/
 	if(markerData.malicious_domain){
 		string += 'Malicious Domain :' + markerData.malicious_domain + '\n';
 	}

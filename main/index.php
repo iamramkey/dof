@@ -318,7 +318,7 @@ $f3->route('GET /blackListedData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select * from $blackListedTableName";
+	$q = "select * from $blackListedTableName limit 1000";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {
