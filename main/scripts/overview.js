@@ -423,7 +423,7 @@ function loadData() {
 						if (!locationsObj[each.getElementsByTagName('location')[0].innerHTML]) {
 							locationsObj[each.getElementsByTagName('location')[0].innerHTML] = 0;
 						}
-						if(each.getElementsByTagName('Status')[0].innerHTML = 'Follow up'){
+						if(each.getElementsByTagName('Status')[0].innerHTML == 'Follow up'){
 							++locationsObj[each.getElementsByTagName('location')[0].innerHTML];
 						}
 					}
