@@ -155,7 +155,7 @@ $f3->route('GET /allData',function($f3){
 		"vpnData" => [],
 		"blackData" => []
 	];
-	$q = "select * from $vpnTableName limit 100";
+	$q = "select * from $vpnTableName";
 	$result = $db->exec($q);
 	if(count($result) > 0){
 		foreach($result as $x) {
@@ -259,7 +259,7 @@ $f3->route('GET /publicData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select * from $publicTableName limit 100";
+	$q = "select * from $publicTableName";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {
@@ -318,7 +318,7 @@ $f3->route('GET /blackListedData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select * from $blackListedTableName limit 100";
+	$q = "select * from $blackListedTableName";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {

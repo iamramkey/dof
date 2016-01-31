@@ -205,7 +205,7 @@ function vpnAjaxCB(data){
 					positions[data.data[i].latitude] = data.data[i].longitude;
 					data.data[i].new = true;
 					if(inFirstPage){
-						data.data[i].icon = (data.data[i].status == 'fail' ? 'assets/redpin.png' : 'assets/greenpin.png');
+						data.data[i].icon = 'assets/greypin.png';
 					}else{
 						data.data[i].icon = (data.data[i].status == 'fail' ? 'assets/red1.png' : 'assets/green1.png');
 					}
@@ -239,7 +239,11 @@ function publicAjaxCB(data){
 					positions[data.data[i].latitude] != data.data[i].longitude) {
 					positions[data.data[i].latitude] = data.data[i].longitude;
 					data.data[i].new = true;
-					data.data[i].icon = 'assets/blue.png';
+					if(inFirstPage){
+						data.data[i].icon = 'assets/bluepin.png';
+					}else{
+						data.data[i].icon = 'assets/blue.png';
+					}
 					publicData.push(data.data[i]);
 					/*
 					publicData.push({
@@ -271,7 +275,7 @@ function blackAjaxCB(data){
 					positions[data.data[i].latitude] = data.data[i].longitude;
 					data.data[i].new = true;
 					if(inFirstPage){
-						data.data[i].icon = 'assets/greypin.png';
+						data.data[i].icon = 'assets/redpin.png';
 					}else{
 						data.data[i].icon = 'assets/pink.png';
 					}
@@ -495,9 +499,9 @@ function fillTable(){
 	if(tableData.length > 0){
 		$('.datatable tbody').html('');
 		generateTableHeaders(tableData[0]);
-		if(tableData.length > tableLimit){
+		/*if(tableData.length > tableLimit){
 			tableData = tableData.slice(0,tableLimit);
-		}
+		}*/
 		for(var i = 0,markerData; markerData = tableData[i]; i++){
 			var tr = $('<tr></tr>');
 			if(markerData.i_paddress){
@@ -583,47 +587,31 @@ function drawRegionsMap() {
 			vpnData = data.data;
 			vpnAjaxCB(data);
 			fillTable();
+			
 			$.ajax({
-				url : 'blackListedData',
+				url : 'publicData',
 				dataType : 'json',
-				success:function(data2){
-					blackData = data2.data;
-					blackAjaxCB(data2);
-					fillTable();	
+				success:function(data1){
+					publicData = data1.data;
+					publicAjaxCB(data1);
+					fillTable();
+					$.ajax({
+						url : 'blackListedData',
+						dataType : 'json',
+						success:function(data2){
+							blackData = data2.data;
+							blackAjaxCB(data2);
+							fillTable();	
+						},
+						error:function(){
+
+						}
+					});
 				},
 				error:function(){
 
 				}
 			});
-			/*$.ajax({
-				url : 'publicData',
-				dataType : 'json',
-				success:function(data1){
-					publicData = data1.data;
-					var geoChartData = new google.visualization.DataTable();
-					geoChartData.addColumn('number', 'Latitude');
-					geoChartData.addColumn('number', 'Longitude');
-					geoChartData.addColumn('string', 'Name');
-					geoChartData.addColumn('number', 'Value');
-					geoChartData.addColumn({type:'string', role:'tooltip'});
-					for(var i =0,each;each = publicData[i] ; i++){
-						chartData.push([Number(each.latitude),Number(each.longitude),"Public IP",Number(each.count),getTooltip(each) ]);
-					}
-					geoChartData.addRows(chartData);
-					var options = {
-						displayMode: 'markers',
-						colorAxis:{
-							colors:['#4096EE','#F97A01']
-						}
-					};
-					var chart = new google.visualization.GeoChart(document.getElementById('googleChartDiv'));
-					chart.draw(geoChartData, options);
-					fillTable();					
-				},
-				error:function(){
-
-				}
-			});*/
 		},
 		error:function(){
 			
