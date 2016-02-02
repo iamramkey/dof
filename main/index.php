@@ -259,7 +259,7 @@ $f3->route('GET /publicData',function($f3){
 		"message" => "successfully retrieved data",
 		"data" => []
 	];
-	$q = "select * from $publicTableName";
+	$q = "select *,INET_NTOA(destination_address) as destination_address1 from $publicTableName";
 	$result = $db1->exec($q);
 	if(count($result) > 0){
 		/*foreach($result as $x) {

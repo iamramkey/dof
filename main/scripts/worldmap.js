@@ -51,6 +51,9 @@ function getContent(markerData) {
 	if(markerData.i_paddress){
 		string += '<div class="infoDetail"><span>IP Address :</span><span>' + markerData.i_paddress + '</span></div>';
 	}
+	if(markerData.destination_address1){
+		 string += '<div class="infoDetail"><span>Destination Address :</span><span>' + markerData.destination_address1 + '</span></div>';
+	}
 	if(markerData.user_name){
 		string += '<div class="infoDetail"><span>User Name :</span><span>' + markerData.user_name + '</span></div>';
 	}
@@ -453,7 +456,7 @@ function generateTableHeaders(markerData){
 	if(markerData.i_paddress){
 		tr.append('<td>IP Address</td>');
 	}
-	if(markerData.destination_address){
+	if(markerData.destination_address1){
 		tr.append('<td>Destination Address</td>');
 	}
 	if(markerData.port){
@@ -513,8 +516,8 @@ function fillTable(){
 			if(markerData.i_paddress){
 				tr.append('<td>' + markerData.i_paddress + '</td>');
 			}
-			if(markerData.destination_address){
-				tr.append('<td>' + markerData.destination_address + '</td>');
+			if(markerData.destination_address1){
+				tr.append('<td>' + markerData.destination_address1 + '</td>');
 			}
 			if(markerData.port){
 				tr.append('<td>' + markerData.port + '</td>');
@@ -557,8 +560,8 @@ function getTooltip(markerData){
 	if(markerData.i_paddress){
 		string += 'IP Address :' + markerData.i_paddress + '\n';
 	}
-	if(markerData.destination_address){
-		string += 'Destination Address :' + markerData.destination_address + '\n';
+	if(markerData.destination_address1){
+		string += 'Destination Address :' + markerData.destination_address1 + '\n';
 	}
 	if(markerData.port){
 		string += 'Port :' + markerData.port + '\n';
@@ -590,6 +593,7 @@ function getTooltip(markerData){
 	if(markerData.message){
 		string += 'Message :' + markerData.message + '\n';
 	}
+	console.log(string);
 	return string;
 }
 function drawRegionsMap() {
