@@ -4,6 +4,10 @@
 // Kickstart the framework
 $f3 = require('lib/base.php');
 
+
+if(!is_dir('XMLFiles')){
+	mkdir('XMLFiles');
+}
 $f3->set('DEBUG', 1);
 if ((float)PCRE_VERSION < 7.9)
     trigger_error('PCRE version is out of date');
@@ -144,6 +148,11 @@ function ipDb(){
 	$elog->write("$publicTableName is having " . count($result) . " rows");
 	$insertArr = [];
 	if(count($result) > 0){
+		$single = new XMLWriter();
+		$single->openMemory();
+		$single->setIndent(true);
+		$single->startDocument();
+		$single->startElement("DocumentElement");
 		foreach($result as $x) {
 			$query = "select *,INET_NTOA('" . $x[$publicColumn] . "') as i_paddress from ip2location where '" . $x[$publicColumn] . "' <= ip_to and '" . $x[$publicColumn] . "' >= ip_from";
 			$res = $db1->exec($query);
@@ -160,6 +169,7 @@ function ipDb(){
 				$elog->write("query is");
 				$elog->write("$insertSQL");
 				$insertArr[] = $insertSQL;
+				addPublicElement($single,$finalResult);
 			}
 		}
 		$insertRes = $db1->exec($insertArr);
@@ -169,6 +179,11 @@ function ipDb(){
 			$elog->write("Insert on $publicTableName is failed");
 			$elog->write("Reason is ");
 			$elog->write($db1->log());
+		}
+		if(file_put_contents('XMLFiles/PublicIP.xml',$single->outputMemory()) !== false){
+			$elog->write("Successfully written all records to single xml file");
+		}else{
+			$elog->write("there was an error writing data to single xml file");
 		}
 	}	
 	
@@ -214,7 +229,7 @@ function ipDb(){
 				$insertArr[] = $insertSQL;
 			}
 		}
-		$insertRes = $db1->exec($insertArr);
+		//$insertRes = $db1->exec($insertArr);
 		if($insertRes){
 			$elog->write("Insert on  $blackListedTableName is successfull");		
 		}else{
@@ -234,6 +249,59 @@ function ipDb(){
 	$elog->write('Total Execution Time: '.$execution_time.' Seconds');
 	echo '<br><b>Total Execution Time:</b> '.$execution_time.' Seconds';
 	
+
+
+function addPublicElement($single,$data){
+	$single->startElement("WorldMap");
+	$single->writeElement("ipAddess", $data['i_paddress']);
+	$single->writeElement("ipAddessTarget", long2ip($data['destination_address']));
+	$single->writeElement("creationTime", $data['creation_time']);
+	$single->writeElement("attackCount", $data['count']);
+	$single->writeElement("latitude", $data['latitude']);
+	$single->writeElement("longitude", $data['longitude']);
+	$single->writeElement("city", $data['city_name']);
+	$single->writeElement("country", $data['country_name']);
+	$single->writeElement("listStatus", "");
+	$single->writeElement("destinationport", $data['port']);
+	$single->writeElement("ImagePath", "");
+	$single->endElement();
+}
+
+
+function generatePublicXML () {
+	$single = new XMLWriter();
+	$single->openMemory();
+	$single->setIndent(true);
+	$single->startDocument();
+	$single->startElement("DocumentElement");
+	$bulk = new XMLWriter();
+	$bulk->openMemory();
+	$bulk->setIndent(true);
+	$bulk->startDocument();
+	$bulk->startElement("DocumentElement");
+	$db = db();
+	$data = $db->exec('SELECT `si_no`, `created_date`, `case_no`, `title`, `locations`, `attack`, `priority`, `engineer`, `pending`, `statuses`, `closed`, `comments` FROM `hpsm_tickets`');
+	for($i = 0; $i < count($data) ; $i++){
+		if(strtotime($data[$i]['created_date']) >= mktime(0, 0, 0, date("m", strtotime("0 month")), 1, date("Y",strtotime("0 month")))){
+			addElement($single,$data[$i]);
+		}else if($data[$i]['statuses'] == 'Follow up'){
+			addElement($single,$data[$i]);
+		}
+		addElement($bulk,$data[$i]);
+	}
+	$bulk->endElement();
+	$single->endElement();
+	if(file_put_contents('XMLFiles/HPSM_Tickets_Bulk.xml',$bulk->outputMemory()) !== false){
+		if(file_put_contents('XMLFiles/HPSMTicketsMonthNew.xml',$single->outputMemory()) !== false){
+			return true;
+		}else{
+			return false;
+		}
+	}else{
+		return false;
+	}
+};
+
 	//$f3->run();
 
 	
