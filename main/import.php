@@ -180,6 +180,7 @@ function ipDb(){
 			$elog->write("Reason is ");
 			$elog->write($db1->log());
 		}
+		$single->endElement();
 		if(file_put_contents('XMLFiles/PublicIP.xml',$single->outputMemory()) !== false){
 			$elog->write("Successfully written all records to single xml file");
 		}else{
