@@ -230,7 +230,7 @@ function ipDb(){
 				$insertArr[] = $insertSQL;
 			}
 		}
-		//$insertRes = $db1->exec($insertArr);
+		$insertRes = $db1->exec($insertArr);
 		if($insertRes){
 			$elog->write("Insert on  $blackListedTableName is successfull");		
 		}else{
@@ -265,6 +265,7 @@ function addPublicElement($single,$data){
 	$single->writeElement("listStatus", "");
 	$single->writeElement("destinationport", $data['port']);
 	$single->writeElement("ImagePath", "");
+	$single->writeElement("UserName", "");
 	$single->endElement();
 }
 
