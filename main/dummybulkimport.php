@@ -78,11 +78,11 @@ function outerDb(){
 		/*
 			main database server details
 		*/
-		$host = '172.25.20.40';
+		$host = 'localhost';
 		$port = '3306';
 		$database = 'soc_dashboarddb';
-		$username = 'dashboard';
-		$password = 'dof1234';
+		$username = 'root';
+		$password = '';
 	}
 	return new DB\SQL(
 		'mysql:host=' . $host . ';port=' . $port . ';dbname=' . $database,
@@ -206,9 +206,15 @@ echo '<br><b>Total Execution Time:</b> '.$execution_time.' Seconds';
 
 
 function addVpnElement($single,$data){
+	$get_array = explode('/',  $data['creation_time']);
+	$day = $get_array[1];
+	$month = $get_array[0];
+	$year = $get_array[2];
+	$time_Stamp = mktime(0,0,0,$month,$day,$year);
 	$single->startElement("WorldMap");
+	$single->writeElement("UserName", $data['user_name']);
 	$single->writeElement("ipAddess", $data['ipAddess']);
-	$single->writeElement("creationTime", $data['creationTime']);
+	$single->writeElement("creationTime",date('d/m/Y',$time_Stamp));
 	$single->writeElement("attackCount", $data['attackCount']);
 	$single->writeElement("latitude", $data['latitude']);
 	$single->writeElement("longitude", $data['longitude']);

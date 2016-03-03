@@ -262,14 +262,15 @@ echo '<br><b>Total Execution Time:</b> '.$execution_time.' Seconds';
 
 function addVpnElement($single,$data){
 	$single->startElement("WorldMap");
+	$single->writeElement("UserName", $data['user_name']);
 	$single->writeElement("ipAddess", $data['i_paddress']);
-	$single->writeElement("creationTime", $data['creation_time']);
+	$single->writeElement("creationTime",date('d/m/Y',strtotime($data['creation_time'])));
 	$single->writeElement("attackCount", $data['count']);
 	$single->writeElement("latitude", $data['latitude']);
 	$single->writeElement("longitude", $data['longitude']);
 	$single->writeElement("city", $data['city_name']);
 	$single->writeElement("country", $data['country_name']);
-	$single->writeElement("listStatus", "");
+	$single->writeElement("listStatus", $data['status']);
 	$single->writeElement("ImagePath", "");
 	$single->endElement();
 }
